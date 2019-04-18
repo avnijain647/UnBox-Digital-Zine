@@ -31,7 +31,9 @@
 
 
 
-
+$('.shape1').on('click', function (){
+  $('x-model').addClass('.display')
+})
 
     document.addEventListener('scroll', function (event) {
         if (event.target.id === 'slide1_1') { // or any other filtering condition

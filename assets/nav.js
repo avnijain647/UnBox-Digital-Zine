@@ -31,9 +31,9 @@
 
 
 
-$('.shape1').on('click', function (){
-  $('x-model').addClass('.display')
-})
+// $('.shape1').on('click', function (){
+//   $('x-model').addClass('.display')
+// })
 
     document.addEventListener('scroll', function (event) {
         if (event.target.id === 'slide1_1') { // or any other filtering condition
@@ -86,7 +86,7 @@ $('.shape1').on('click', function (){
       	$(document).on('click', function(e){
 
 
-            if($('.zoom-out').is(':visible')){
+            if($('.zoom-out').is(':visible'))(cursor.is(':visible'){
               var image_width = $(".overview").width()
               var image_height = $(".overview").height()
             $(".overview").removeClass("zoom-out").addClass("zoom-in")

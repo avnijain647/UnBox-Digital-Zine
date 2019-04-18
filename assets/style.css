@@ -1,0 +1,232 @@
+body{
+  left:0;
+  /* height: 1500px; */
+  background-color: white;
+/* background-image: url(scan_5.jpg); */
+    /* width: 2400px; */
+  /* cursor:zoom-out; */
+}
+
+#center{
+  z-index: 3;
+  top:50%;
+  left:50%;
+transform: translate(-50%, -50%);
+position:absolute;
+width:4%;
+height:4%;
+background-color: yellow;
+}
+
+.overview{
+  z-index: 6;
+ /* background-color: blue; */
+ position: relative;
+ top: 0;
+ left: 0;
+ height: 2290px;
+ width:2700px;
+ overflow: scroll;
+ background-size: contain;
+
+}
+img{
+  width:100%;
+  height:100%;
+}
+.zoom-in{
+  height: 84vw;
+  width:100vw;
+  cursor:zoom-in;
+}
+
+.zoom-out{
+  cursor:zoom-out;
+}
+.overview2{
+    /* width: 2100px; */
+}
+
+.slide1{
+    z-index: 0;
+  position:absolute;
+  top:0;
+  left:0;
+  width:33.3%;
+  height:28%;
+}
+.slide_img{
+    position:absolute;
+  z-index:0;
+    transform-style: preserve-3d;
+transform-origin: center;
+}
+
+#slide1_1{
+overflow: scroll;
+  transform-origin: center;
+  transform-style: preserve-3d;
+    z-index: 10;
+  position:absolute;
+
+  top:0;
+  left:0;
+  width:33.3%;
+  height:28%;
+  /* height:300px; */
+}
+.slide3d{
+  right:25px;
+  bottom:25px;
+    position: absolute;
+    background-color: red;
+  overflow:auto;
+  width:300px;
+  height:300px;
+}
+
+#threed{
+  /* overflow:  auto; */
+    z-index:10;
+  position: fixed;
+  right:25px;
+  bottom:25px;
+  width:50%;
+
+  /* height:200px; */
+}
+  x-model {
+
+    height:600px;
+
+    animation: 5s spin linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotateX(-90Deg);
+      transform: rotateY(0Deg);
+    }
+    100% {
+      transform: rotateX(-90Deg);
+      transform: rotateY(360Deg);
+    }
+  }
+#slide2{
+    z-index: 9;
+  overflow:scroll;
+  position:absolute;
+  top:0;
+  left:33.3%;
+  width:33.3%;
+  height:28%;
+
+}
+.slide2_1{
+  overflow:scroll;
+
+  /* top:0;
+  left:40vw; */
+  position:relative;
+  width:100%;
+  height:100%;
+  /* width:600px; */
+  /* height:1300px; */
+}
+
+
+
+/* .fixed_side{
+  overflow:  visible;
+  position:absolute;
+left:0;
+background-color: rgb(210, 230, 180, .5);
+width:40vw;
+height:100vh;
+z-index:2;
+background-image: url(black_lines.png);
+} */
+.scroll_side{
+  top:0;
+  /* width:600px; */
+  /* position:absolute; */
+left:0;
+}
+
+.scroll_side2{
+  /* position:relative; */
+display: flex;
+flex-wrap: nowrap;
+}
+
+.yellow img{
+width:100%;
+/* position:absolute; */
+/* position:absolute; */
+/* background-image: url(graphic.jpeg); */
+  /* width:100%;
+height:100%; */
+  background-color: yellow;
+}
+
+.red img{
+  /* position:absolute; */
+  width:100%;
+/* position:absolute; */
+  /* width:100%;
+    height:100%; */
+  background-color: blue;
+}
+
+
+.slide3{
+    z-index: 9;
+  overflow:scroll;
+  position:absolute;
+  top:0;
+  left:66.6%;
+  width:33.3%;
+  height:28%;
+  background-color: #555;
+}
+.slide3_1{
+
+  width:30vw;
+  height:80vh;
+}
+.slide4{
+    z-index: 9;
+
+  position:absolute;
+  top:28%;
+  left:0;
+  width:33.3%;
+  height:28%;
+  background-color: #444;
+}
+.slide5_1{
+
+
+}
+
+.slide5{
+  z-index: 9;
+  overflow: scroll;
+  position:absolute;
+  top:28%;
+  left:33.3%;
+  width:33.3%;
+  height:28%;
+  background-color: #aaa;
+
+}
+
+.slide6 {
+    z-index: 9;
+  position:absolute;
+  top:28%;
+  left:66.6%;
+  width:33.3%;
+  height:28%;
+  background-color: #ccc;
+}

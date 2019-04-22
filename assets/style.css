@@ -1,3 +1,7 @@
+@font-face{
+  font-family: Firacode Regular;
+  src: url(firacode-regular.otf);
+}
 body{
   left:0;
   /* height: 1500px; */
@@ -75,13 +79,17 @@ img{
     transform-style: preserve-3d;
 transform-origin: center;
 } */
-
+/* .shape1{
+position:relative;
+top:40%;
+left:15%;
+width:800px;
+} */
 x-model {
-  perspective: 3000;
+
+  /* perspective: 3000; */
 transform-style: preserve-3d;
   z-index:10;
-
-  position: absolute;
   animation: 5s spin linear infinite;
   transform: rotateX(-90Deg);
 }
@@ -130,10 +138,42 @@ overflow: scroll;
   position:absolute;
   top:0;
   left:33.3%;
-  width:66.6%;
+  width:33.3%;
   height:28%;
+  overflow: scroll;
+
+      /* align-items: flex-start; */
+      /* justify-content: flex-start; */
+
+      /* flex-wrap: nowrap; */
 
 }
+
+/* .hand2{
+  position: relative;
+  top:50%;
+
+left:80%;
+  width:20%;
+    height:20%;
+    transform-origin: center;
+    transform: rotate(90deg);
+  animation: 1s move_y linear infinite;
+}
+@keyframes move_y {
+  0% {
+
+    transform:translate(-20%, -50%);
+  }
+  50% {
+
+  transform:translate(-10%, -50%);
+  }
+  100% {
+
+  transform:translate(-20%, -50%);
+  }
+} */
 .slide2_1{
 
 width:100%;
@@ -143,7 +183,7 @@ height: 100%;
   position:relative;
 
     display: flex;
-    flex-wrap:wrap;
+    /* flex-wrap:wrap; */
 }
 .scroll_side1{
   position: absolute;
@@ -151,11 +191,7 @@ width:50%;
   top:0;
   left:0;
 }
-.yellow{
-  top:0;
-  left:0;
 
-}
 /*
 
 .hand1{
@@ -187,7 +223,7 @@ width:50%;
   animation: 1s move_x linear infinite;
 }
 */
-.red img{
+.red {
   /* position:absolute; */
   width:100%;
 /* position:absolute; */
@@ -235,9 +271,11 @@ width:50%;
 
 }
 .scroll_down{
+
 position: relative;
 }
 .scroll_up{
+
 position: relative;
 }
 
@@ -266,6 +304,7 @@ position: relative;
   transform:translate(-50%, -20%);
   }
 }
+
 .slide6 {
     z-index: 9;
   position:absolute;
@@ -276,6 +315,7 @@ position: relative;
   background-color: #ccc;
 }
 .slide7{
+
     z-index: 9;
   position:absolute;
   top:56%;
@@ -286,6 +326,8 @@ position: relative;
 }
 
 .slide8{
+
+      display: flex;
   z-index: 9;
   overflow: scroll;
   position:absolute;
@@ -334,11 +376,19 @@ position: relative;
   height:28%;
   background-color: #444;
 }
-
+.close{
+  position:absolute;
+  top:-20px;
+  right:-20px;
+  font-family: Firacode Regular;
+  font-size: 72px;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
 .click_layer{
   z-index: 12;
-  opacity:0;
- /* background-color: yellow; */
+
+ /* background-color:rgb(110,210,150, 0.5); */
  position: absolute;
  top: 0;
  left: 0;
@@ -347,6 +397,54 @@ position: relative;
  overflow: scroll;
  pointer-events:none;
 
+}
+.click1{
+/* background-color: red; */
+  z-index: 12;
+position:absolute;
+top:0;
+left:0;
+width:33.3%;
+height:28%;
+}
+/* .shape2{
+
+  position: relative;
+} */
+.shape_2{
+  pointer-events: all;
+cursor:pointer;
+/* background-color: red; */
+transform-origin: center;
+animation: 3s round linear infinite;
+position:absolute;
+top:20%;
+left:65%;
+z-index:10;
+width:2 0%;
+height:20%;
+
+}
+@keyframes round {
+  0% {
+  transform: rotate(0);
+  }
+
+  100% {
+  transform: rotate(360deg);
+  }
+}
+.link1{
+  pointer-events: all;
+cursor:pointer;
+/* background-color: red; */
+position:absolute;
+top:20%;
+right:10%;
+z-index:10;
+width:80%;
+height:90%;
+display: none;
 }
 .click3{
   z-index: 12;
@@ -362,18 +460,22 @@ height:28%;
   cursor:pointer;
 /* background-color: red; */
   position:relative;
-  top:70%;
-  left:30%;
+  top:65%;
+  left:10%;
 z-index:10;
 width:20%;
 height:20%;
 }
 .audio1{
+  position:absolute;
+  top:10px;
+  left:-40px;
   display:none;
 }
+.show{
+    display:block;
+}
 .shape_1 img{
-
-
 cursor: pointer;
 top:120px;
 left:50px;
@@ -391,6 +493,66 @@ width:20%;
 .shape1_1 img{
   width:100px;
 }
+.click6{
+  z-index: 12;
+position:absolute;
+top:28%;
+left:66.6%;
+width:33.3%;
+height:28%;
+}
+
+.shape_6 img{
+pointer-events: all;
+/* background-color: blue; */
+cursor: pointer;
+position: absolute;
+top:50%;
+left:50%;
+animation:10s frisbee linear infinite;
+width:10%;
+height:10%;
+}
+@keyframes frisbee{
+  0% {
+    top:20%;
+    left:30%;
+  }
+  50% {
+    top:70%;
+    left:80%;
+  }
+  75% {
+    top:90%;
+    left:50%;
+  }
+  100% {
+    top:20%;
+    left:30%;
+  }
+}
+.link6{
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+top:20%;
+left:10%;
+width:70%;
+z-index:14;
+display: none;
+}
+.show{
+  display: block;
+}
+.click8{
+  z-index: 12;
+position:absolute;
+top:56%;
+left:33.3%;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
+}
 @keyframes wide {
   0% {
     width:0;
@@ -403,16 +565,43 @@ width:20%;
   }
 }
 
+.shape8{
+  pointer-events: all;
+cursor:pointer;
+/* background-color: red; */
+position:absolute;
+top:20%;
+left:30%;
+z-index:10;
+width:50%;
 
-/* .flag{
-  z-index:0;
-  position: absolute;
-  top:0;
-  left:0;
-  background-color: rgb(120,230,128,.4);
-  width:100vw;
-  height:100vh;
-} */
+}
+.shape8_1{
+  top:10%;
+  left:10%;
+  width:20px;
+  height:20px;
+  position:absolute;
+
+}
+.link8{
+  pointer-events: all;
+cursor:pointer;
+/* background-color: red; */
+position:absolute;
+top:20%;
+left:10%;
+width:80%;
+z-index:14;
+display: none;
+
+}
+.show{
+  display: block;
+}
+video{
+  width:100%;
+}
 
 @media (max-width:500px){
 

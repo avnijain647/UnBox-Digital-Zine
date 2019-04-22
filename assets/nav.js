@@ -66,7 +66,8 @@
 
 
       	$("#overview").addClass("zoom-out")
-
+// $(".click_layer").css({"height":2200 + "width":2600})       s
+$(".click_layer").css('pointer-events', 'none')
       	var image_width = $("#overview").width()
       	var image_height = $("#overview").height()
 
@@ -103,8 +104,9 @@ $('#overview').on('click', function(e){
 
   $("#overview").removeClass("zoom-in").addClass("zoom-out")
   $("#overview").css({"height":2200, "width":2600})
-  	$(".click_layer").css('opacity',0)
-  // $(".click_layer").css({"height":2200 + "width":2600})
+  	// $(".click_layer").css('opacity',0)
+
+  $(".click_layer").css({"height":2200 , "width":2600})
        var offset_top = e.pageY;
        var offset_left = e.pageX;
        // var window_height = $(window).height();
@@ -138,10 +140,31 @@ $('#overview').on('click', function(e){
 })
 $('.shape_1').on('click',function (){
 
-          $(".audio1").css('display', 'block')
+          $(".audio1").toggleClass('show')
 
 })
+$('.shape_6').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link6').addClass('show')
 
+})
+$('.shape8').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link8').addClass('show')
+
+})
+$('.close').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link8').removeClass('show')
+            $('.link1').removeClass('show')
+            $('.link6').removeClass('show')
+
+})
+$('.shape_2').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link1').addClass('show')
+
+})
 //   $(window).resize(function(){
 //
 // 	var window_height = $(this).height();

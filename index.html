@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/jquery.js"></script>
+<script src="assets/jquery2.js"></script>
 <script src="assets/nav.js"></script>
 <script src="assets/three.min.js"></script>
 <script src="assets/OBJLoader.js"></script>
@@ -9,16 +10,13 @@
 <script src="assets/custom.js"></script>
 </head>
 <body>
-<div class="overview">
+<div id="overview">
 
-   <div class="slide1">
+   <div id="slide1">
   <img class="slide_img"src="assets/scan_5.jpg">
-  <div class="shape1">
-    <div class="shape1_1">
-    <img src="assets/shape1.svg">
-  </div>
-  <x-model id="threed" src="assets/scene.gltf"></x-model>
-     </div>
+  <!-- <div class="shape1">
+  <x-model src="assets/scene.gltf"></x-model>
+     </div> -->
    </div>
 
 <!-- <div id="slide1_1">
@@ -30,10 +28,16 @@
 <div class="slide2_1">
   <!-- <div class="fixed_side"></div> -->
 <div class="scroll_side">
-  <div class="scroll_side2">
-    <div class="yellow"><img src="assets/scan_5_1.jpg"></div>
+  <div class="scroll_side1">
+      <img class="yellow"src="assets/scan_5_1.jpg">
+
       <!-- <div class="red"><img src="assets/scan_4.jpg"></div> -->
   </div>
+  <!-- <div class="scroll_side2">
+      <img class="red"src="assets/scan_4.jpg">
+
+      <div class="red"><img src="assets/scan_4.jpg"></div>
+  </div> -->
 </div>
 </div>
 
@@ -52,9 +56,16 @@
     </div>
 
     <div class=" slide5">
-<div class="slide5_1">
+
+  <div class="scroll_down">
+  <img class="hand1"src="assets/hand_right.svg">
 <img src="assets/scan_1.jpg">
+</div>
+<div class="scroll_up">
+  <img class="hand1"src="assets/hand_left.svg">
 <img src="assets/scan_7.jpg">
+
+
 </div>
 
 
@@ -63,15 +74,53 @@
     <div class="slide6">
 <img src="assets/scan_2.jpg">
      </div>
-
-
-<div id="center"></div>
-
-
+<div class="slide7">
+<img src="assets/scan_12_1.jpg">
+</div>
+<div class="slide8">
+  <img src="assets/scan_11_1.jpg">
+  <img src="assets/scan_11_2.jpg">
+</div>
+<div class="slide9">
+  <img src="assets/scan_10_3.jpg">
 
 
 </div>
+<div class="slide10">
+<img src="assets/scan_10_1.jpg">
+</div>
+<div class="slide11">
+  <img src="assets/scan_9_1.jpg">
+    <img src="assets/scan_10_2.jpg">
 
+</div>
+<div class="slide12">
+  <img src="assets/scan_7_1.jpg">
+</div>
+</div>
+<!--
+<div id="center"></div>
+
+</div> -->
+<div class="click_layer">
+<div class="click3">
+<div class="shape_1">
+  <div class="shape1_1">
+    <img src="assets/shape_round_yellow.svg">
+
+  </div>
+    <audio class="audio1"src="assets/countdown _unbox.MP3" controls></audio>
+</div>
+
+</div>
+
+
+
+
+<!-- <div class="flag">
+
+</div> -->
+  <!-- <div class="voice"></div> -->
           <!--
         -->
   <!-- <img  src="assets/scan_9.jpg">
@@ -104,7 +153,12 @@
 
 
 
-
-
+<script src="assets/jquery.js"></script>
+<script src="assets/jquery2.js"></script>
+<script src="assets/nav.js"></script>
+<script src="assets/three.min.js"></script>
+<script src="assets/OBJLoader.js"></script>
+<script src="assets/GLTFLoader.js"></script>
+<script src="assets/custom.js"></script>
   </body>
   </html>

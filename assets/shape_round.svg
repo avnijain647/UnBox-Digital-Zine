@@ -3,36 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 312.9 246.6" style="enable-background:new 0 0 312.9 246.6;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:6;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#EC5445;stroke-width:4;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#A91E22;stroke-width:4;stroke-miterlimit:10;}
-	.st3{fill:#8DB2DE;stroke:#8DB2DE;}
-	.st4{fill:#231F20;}
-	.st5{fill:#513534;stroke:#513534;stroke-width:1.5777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st6{fill:#513534;stroke:#513534;stroke-width:1.6313;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st7{fill:#513534;stroke:#513534;}
-	.st8{fill:#E2C7CF;}
-	.st9{fill:#8CB1DE;}
-	.st10{fill:#B4DBB4;}
-	.st11{fill:#F37E65;}
-	.st12{fill:#FCF7EC;}
-	.st13{fill:#E9C189;}
-	.st14{fill:#CCDD61;}
-	.st15{fill:#EC5244;}
-	.st16{fill:#AFF9AF;}
-	.st17{clip-path:url(#SVGID_2_);fill:#EC5244;}
-	.st18{clip-path:url(#SVGID_4_);fill:#AFF9AF;}
-	.st19{clip-path:url(#SVGID_6_);fill:#8CB1DE;}
-	.st20{fill:#D7C18E;}
-	.st21{fill:#503433;}
-	.st22{clip-path:url(#SVGID_8_);}
-	.st23{clip-path:url(#SVGID_10_);}
-	.st24{fill:#221F1F;}
-	.st25{clip-path:url(#SVGID_12_);}
-	.st26{clip-path:url(#SVGID_14_);}
-	.st27{clip-path:url(#SVGID_16_);}
-	.st28{clip-path:url(#SVGID_18_);}
-	.st29{clip-path:url(#SVGID_20_);}
+	.st0{fill:none;stroke:#EC5244;stroke-width:10;stroke-miterlimit:10;}
 </style>
 <line class="st0" x1="18" y1="113.2" x2="18.1" y2="150.6"/>
 <line class="st0" x1="37.7" y1="84.4" x2="35.9" y2="180.2"/>

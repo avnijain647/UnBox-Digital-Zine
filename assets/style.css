@@ -235,7 +235,7 @@ width:50%;
 
 .slide3{
     z-index: 9;
-  overflow:scroll;
+  /* overflow:scroll; */
   position:absolute;
   top:0;
   left:66.6%;
@@ -483,13 +483,25 @@ width:20%;
 }
 .shape1_1{
   transform-origin: top left;
-  width:100%;
+  width:55%;
   overflow: hidden;
   /* background-color: blue; */
   transform:rotate(-40DEG);
     animation: 3s wide linear infinite;
 
 }
+@keyframes wide {
+  0% {
+    width:0;
+  }
+  50%{
+    width:55%;
+  }
+  100% {
+    width:0;
+  }
+}
+
 .shape1_1 img{
   width:100px;
 }
@@ -552,17 +564,6 @@ left:33.3%;
 width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
-}
-@keyframes wide {
-  0% {
-    width:0;
-  }
-  50%{
-    width:100%;
-  }
-  100% {
-    width:0;
-  }
 }
 
 .shape8{

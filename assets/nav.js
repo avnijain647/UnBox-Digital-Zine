@@ -75,10 +75,10 @@ $(".click_layer").css('pointer-events', 'none')
       	$("#center").css({'top': image_height/2 , 'left': image_width/2 });
 
 
-        var init_top = $("#overview").offset().top-800;
-	     var init_left = $("#overview").offset().left-900;
-
-      	// scroll_to(init_top,init_left)
+        var init_top = $("#overview").offset().top+800;
+	     var init_left = $("#overview").offset().left+900;
+  console.log(init_left)
+      	scroll_to(init_top,init_left)
 })
 
 // $("#slide1").css('opacity', 0);

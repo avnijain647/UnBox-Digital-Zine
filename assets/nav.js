@@ -50,36 +50,49 @@
         }
     }, true /*Capture event*/)
 
+    $(document).ready( function scroll_to(init_top, init_left){
+      var init_top = $("#overview").offset().top+575;
+     var init_left = $("#overview").offset().left+700;
+     $("#overview").addClass("zoom-out")
 
+      $('html,body').animate({
+     scrollTop: init_top,
+      scrollLeft:init_left}, 300);
+
+
+    // console.log(init_top)
+
+    })
 
       var window_height = $(window).height();
       var window_width= $(window).width();
-
-      function scroll_to(top,left) {
-      	$('html,body').animate({
-      		scrollTop: top,
-      		scrollLeft:left
-      	}, 0.1);
-      }
-
-      $(document).ready(function(){
+      //
+      // function scroll_to(init_top,init_left) {
+      // 	$(document).animate({
+      // 		scrollTop: init_top,
+      // 		scrollLeft:init_left
+      // 	}, 0.1);
+      // }
 
 
-      	$("#overview").addClass("zoom-out")
-// $(".click_layer").css({"height":2200 + "width":2600})       s
-$(".click_layer").css('pointer-events', 'none')
+
+
+
+// $(".click_layer").css({"height":2200 + "width":2600})
+// $(".click_layer").css('pointer-events', 'none')
       	var image_width = $("#overview").width()
       	var image_height = $("#overview").height()
 
 
-      	$("#center").css({'top': image_height/2 , 'left': image_width/2 });
+      	// $("#center").css({'top': image_height/2 , 'left': image_width/2 });
 
+  //
+  //       var init_top = $("#overview").offset().top+800;
+	//      var init_left = $("#overview").offset().left+700;
+  // console.log(init_left)
+  // console.log(init_top)
+  //     	scroll_to(init_top,init_left)
 
-        var init_top = $("#overview").offset().top+800;
-	     var init_left = $("#overview").offset().left+900;
-  console.log(init_left)
-      	scroll_to(init_top,init_left)
-})
 
 // $("#slide1").css('opacity', 0);
 $('#overview').on('click', function(e){
@@ -96,7 +109,7 @@ $('#overview').on('click', function(e){
       			$("#overview").css({"height":84 + 'vw', "width":window_width})
             	$(".click_layer").css({"height":84 + 'vw', "width":window_width})
                 	$(".click_layer").css('opacity',1)
-            scroll_to({'top':0,'left':0})
+            // scroll_to({'top':0,'left':0})
 
             // console.log(window_height);
 }else{

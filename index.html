@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/jquery.js"></script>
 <script src="assets/jquery2.js"></script>
@@ -8,115 +12,134 @@
 <script src="assets/OBJLoader.js"></script>
 <script src="assets/GLTFLoader.js"></script>
 <script src="assets/custom.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="assets/position.js"></script>
+
+</script>
 </head>
 <body>
+  <div class="scroll_all">
 <div id="overview">
 
-   <div id="slide1">
-  <img class="slide_img"src="assets/scan_5.jpg">
-  <div class="shape1">
-  <x-model src="assets/scene.gltf"></x-model>
-     </div>
-   </div>
+<h1>Front</h1>
 
-<!-- <div id="slide1_1">
-  <div class="slide3d">
-<x-model id="threed" src="assets/scene.gltf"></x-model>
-</div>
-</div> -->
-   <div id="slide2">
-
-  <!-- <div class="fixed_side"></div> -->
-  <div class="scroll_right">
-      <!-- <img class="hand3"src="assets/hand_left.svg"> -->
-      <img class="yellow2" src="assets/scan_4.jpg">
-        <img class="yellow" src="assets/scan_5_1.jpg">
-  </div>
-
-
-  <!-- <div class="scroll_side2">
-      <img class="red"src="assets/scan_4.jpg">
-
-      <div class="red"><img src="assets/scan_4.jpg"></div>
-  </div> -->
-
-
-
-
-
-   </div>
-
-    <div class="slide3">
-
-<img src="assets/scan_3.jpg">
-
-    </div>
-
-    <div class="slide4">
-<img src="assets/scan_6.jpg">
-    </div>
-
-    <div class=" slide5">
-
-  <div class="scroll_down">
-  <img class="hand1"src="assets/hand_right.svg">
-<img src="assets/scan_1.jpg">
-</div>
-<div class="scroll_up">
-  <img class="hand1"src="assets/hand_left.svg">
-<img src="assets/scan_7.jpg">
-
-
-</div>
-
-
-    </div>
-
-    <div class="slide6">
-<img src="assets/scan_2.jpg">
-     </div>
-<div class="slide7">
-<img src="assets/scan_12_1.jpg">
-</div>
-<div class="slide8">
-  <img src="assets/scan_11_3.jpg">
-
-</div>
-<div class="slide9">
-  <img src="assets/scan_10_3.jpg">
-
-
-</div>
-<div class="slide10">
-<img src="assets/scan_10_1.jpg">
-</div>
 <div class="slide11">
   <div class="scroll_down">
-      <img class="hand1"src="assets/hand_right.svg">
+      <!-- <img class="hand1"src="assets/hand_right.svg"> -->
   <img src="assets/scan_9_1.jpg">
 </div>
-<div class="scroll_up">
+<!-- <div class="scroll_up">
     <img class="hand1"src="assets/hand_left.svg">
-    <img src="assets/scan_10_2.jpg">
-</div>
-</div>
-<div class="slide12">
-  <img src="assets/scan_7_1.jpg">
-</div>
-</div>
-<!--
-<div id="center"></div>
 
 </div> -->
+</div>
+
+<div class=" slide5">
+<div class="scroll_down">
+<!-- <img class="hand1"src="assets/hand_right.svg"> -->
+<img src="assets/scan_1.jpg">
+</div>
+<!-- <div class="scroll_up">
+<img class="hand1"src="assets/hand_left.svg">
+<img src="assets/scan_7.jpg">
+</div> -->
+</div>
+
+<div class="slide6">
+  <div class="scroll_down">
+<img src="assets/scan_2.jpg">
+</div>
+ </div>
+
+     <div class="slide3">
+         <div class="scroll_down">
+ <img src="assets/scan_3.jpg">
+ </div>
+     </div>
+
+        <div id="slide2">
+       <div class="scroll_right">
+           <img class="yellow2" src="assets/scan_4.jpg">
+             <img class="yellow" src="assets/scan_5_1.jpg">
+       </div>
+        </div>
+
+   <div id="slide1">
+      <div class="scroll_down">
+  <img class="slide_img"src="assets/scan_5.jpg">
+  <div class="shape1">
+  <x-model id="xd_model" src="assets/scene.gltf"></x-model>
+     </div>
+   </div>
+   </div>
+
+    <div class="slide4">
+       <div class="scroll_down">
+<img src="assets/scan_6.jpg">
+</div>
+    </div>
+
+    <div class="slide10">
+        <div class="scroll_down">
+      <img src="assets/scan_7.jpg">
+    <!-- <img src="assets/scan_10_1.jpg"> -->
+      </div>
+    </div>
+
+<div class="slide7">
+  <div class="scroll_down">
+<img src="assets/scan_12_1.jpg">
+</div>
+</div>
+
+<div class="slide8">
+  <div class="scroll_down">
+  <img src="assets/scan_11_3.jpg">
+</div>
+</div>
+
+<div class="slide9">
+  <div class="scroll_down">
+  <img src="assets/scan_10_3.jpg">
+  </div>
+</div>
+
+
+
+
+<div class="slide12">
+  <div class="scroll_down">
+  <img src="assets/scan_10_2.jpg">
+    </div>
+  <!-- <img src="assets/scan_7_1.jpg"> -->
+</div>
+
+</div>
+
 <div class="click_layer">
+
   <div class="click1">
     <div class="shape2">
+      <div class="shape_2shadow">
+        <img src="assets/shapecanshadow4.svg">
+        <!-- <img src="assets/shapecanshadow2.svg"> -->
+          <!-- <img src="assets/shape_zine2.svg"> -->
+      </div>
   <div class="shape_2">
-      <img src="assets/shape_zine2.svg">
+    <img src="assets/shapecan.svg">
+      <!-- <img src="assets/shape_zine2.svg"> -->
   </div>
+
+  <div class="shape_2_2">
+    <img src="assets/shapefan1.svg">
+      <!-- <img src="assets/shape_racket.svg"> -->
+  </div>
+
   <div class="shape_2_1">
-      <img src="assets/shape_racket.svg">
+    <img src="assets/shapefan2.svg">
+      <!-- <img src="assets/shape_racket.svg"> -->
   </div>
+
   <div class="link1">
     <div class="close">+</div>
     <embed  src="assets/perfume_zine.pdf#view=Fit"  type="application/pdf" zoom="50" width="100%" height="100%" />
@@ -127,18 +150,17 @@
   </div>
 </div>
   </div>
+
   <div class="click2">
     <div class="shape2_1">
 <img class="hand2" src="assets/hand_right.svg">
   </div>
-  
-
   </div>
+
 <div class="click3">
 <div class="shape_1">
   <div class="shape1_1">
     <img src="assets/shape_round.svg">
-
   </div>
   <div class="link3">
   <div class="close">+</div>
@@ -146,29 +168,44 @@
 </div>
 </div>
 </div>
+
+<div class="click5">
+<div class="shape_5">
+  <div class="shape5">
+    <!-- <img src="assets/ball.svg"> -->
+  </div>
+  <div class="link5">
+  <div class="close">+</div>
+  <!-- <audio class="audio1"src="assets/countdown _unbox.MP3"  controls></audio> -->
+</div>
+</div>
+</div>
+
 <div class="click6">
   <div class="shape6">
 <div class="shape_6">
-    <img src="assets/ball.svg">
+  <div class="flag">
+    <img class="" src="assets/shapeflag2.svg">
+      </div>
+
+
 </div>
-<div class="shape_6_2">
+<!-- <div class="shape_6_2">
     <img src="assets/shape_leaf.svg">
-</div>
+</div> -->
 </div>
 <div class="link6">
   <div class="close">+</div>
 <video src="assets/frisbee.mp4" controls></video>
-
 </div>
 <div class="link6_2">
   <div class="close">+</div>
 <video src="assets/venuetimelapse.mp4" controls></video>
+</div>
+</div>
 
-</div>
-</div>
 <div class="click7">
   <div class="shape7">
-
 <div class="shape_7">
     <img src="assets/shape_fan.svg">
 </div>
@@ -176,15 +213,14 @@
 <div class="link7">
   <div class="close">+</div>
   <img src="assets/universalthirst.jpeg">
+</div>
+</div>
 
-</div>
-</div>
 <div class="click8">
   <div class="click_8">
 <div class="shape8">
   <img src="assets/flag.jpg">
   <div class="shape8_1">
-
 </div>
 </div>
 <div class="link8">
@@ -196,42 +232,13 @@
 
 </div>
 
-
-
-
-<!-- <div class="flag">
-
-</div> -->
-  <!-- <div class="voice"></div> -->
-          <!--
-        -->
-  <!-- <img  src="assets/scan_9.jpg">
-  <img src="assets/scan_0.jpg">
-  <img src="assets/scan_8.jpg">
-    <img  src="assets/scan_11.jpg">
-
-  <img src="assets/scan_10.jpg">
-  <img src="assets/scan_12.jpg">
-  <img  src="assets/scan_13.jpg">
-  <img src="assets/scan_14.jpg">
-  <img  src="assets/scan_15.jpg"> -->
+</div>
 
 
 
 
-<!-- <div class="scenes">
-  <div class="scene1">Scene 1
-<div class="overview_scene">Overview</div>
-<div class="jobs">Jobs</div>
-<div class="sources">Sources</div>
-<div class="conceptart">Concept art</div>
-<div class="visualreferences">Visual References</div>
-<div class="assets">Assets</div>
-  </div>
-  <div class="scene2">Scene 2</div>
-  <div class="scene3">Scene 3</div>
-  <div class="scene4">Scene 4</div>
-</div> -->
+
+
 
 
 

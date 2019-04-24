@@ -1,37 +1,35 @@
 
-// $(document).on('scroll' , function(){
-//
-// // var pixels = $(document).scrollTop()
-// // var documentHeight = $(document).height()
-// // var windowHeight = $(window).height()
-// //
-// // var difference = documentHeight - windowHeight
-// // var percentage = 100 * pixels / difference
-// // $('.threed').addClass(".transform")
-//
-//
-//   $('.threed').addClass('.transfrom');
-//
-//
-//
-// // let modelElem = createModelElement('x-model', -1800, 9000, 90000);
-//
-//
-// // if($(document).scrollTop()<750){
-// // var pixels = $(document).scrollTop()
-// // $('.overview').css('left', -1 * pixels)
-// // }
-// // if($(document).scrollTop()>739){
-// // var pixel = $(document).scrollTop()
-// // $('.overview').css('top', -1 * pixel )}
-// // console.log(pixels);
-//     // $('.overview').css('left', -1 * pixels)
-//
-//   })
+$(document).on('scroll', function(){
+
+var windowWidth = $(window).width()
+var pixels = $(document).scrollTop()
+console.log('scrolling', document)
+if(windowWidth<600){
+  $('.scroll_all').css('left', -1 * pixels)
+  // $('.scroll_all').css('background-color', 'black')
+  , true}
+// $('.scroll_all').css('background-color', 'black')
+console.log(windowWidth)
 
 
-//
+  })
 
+
+$(document).ready(()=> {
+
+var windowWidth = $(window).width()
+if(windowWidth<500){
+$('.scroll_all').css('background-color', 'red')
+  $(document).hide('.zoom-in')
+  	$(".click_layer").css({"height":100 + 'vh', "width":9000})
+  $(document).hide('.zoom-in')
+  	$("#overview").css({"height":100 + 'vh', "width":9000})
+    $(document).hide('.zoom-out')
+    $(document).hide('.zoom-in')
+  , true}
+
+console.log(windowWidth)
+})
 
     document.addEventListener('scroll', function (event) {
         if (event.target.id === 'slide1_1') { // or any other filtering condition
@@ -53,12 +51,14 @@
     $(document).ready( function scroll_to(init_top, init_left){
       var init_top = $("#overview").offset().top+575;
      var init_left = $("#overview").offset().left+700;
-     $("#overview").addClass("zoom-out")
+var windowWidth = $(window).width()
+      if(windowWidth>600){
+        $("#overview").addClass("zoom-out")
 
       $('html,body').animate({
      scrollTop: init_top,
-      scrollLeft:init_left}, 300);
-
+      scrollLeft:init_left}, 300), true
+}
 
     })
 
@@ -95,9 +95,9 @@
   var image_height = $("#overview").height()
 // $("#slide1").css('opacity', 0);
 $('#overview').on('click', function(e){
+var windowWidth = $(window).width()
 
-
-            if($('.zoom-out').is(':visible')){
+            if($('.zoom-out').is(':visible') && windowWidth>600){
 
             $("#overview").removeClass("zoom-out").addClass("zoom-in")
       			// $(".overview").removeClass("zoom-out").addClass("zoom-in");
@@ -110,7 +110,7 @@ $('#overview').on('click', function(e){
             scroll_to({'top':0,'left':0})
 
             // console.log(window_height);
-}else{
+}else if (windowWidth>600){
   // $(".overview.zoom-in").on('click',function(){
 
 
@@ -191,7 +191,7 @@ $('.shape_2').on('click',function (){
           $('.link1').addClass('show')
 
 })
-$('.shape_2_1').on('click',function (){
+$('.shape_2_1', ).on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1_1').addClass('show')
 
@@ -206,6 +206,12 @@ $('.shape_6_2').on('click',function (){
           $('.link6_2').addClass('show')
 
 })
+
+
+
+
+
+
 //   $(window).resize(function(){
 //
 // 	var window_height = $(this).height();

@@ -24,7 +24,8 @@
 <div class="slide11">
   <div class="scroll_down">
       <!-- <img class="hand1"src="assets/hand_right.svg"> -->
-  <img src="assets/scan_9_1.jpg">
+
+  <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_9_1.jpg">
 </div>
 <!-- <div class="scroll_up">
     <img class="hand1"src="assets/hand_left.svg">
@@ -35,81 +36,81 @@
 <div class=" slide5">
 <div class="scroll_down">
 
-<img src="assets/scan_1.jpg">
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_1.jpg">
 </div>
 
 </div>
 
 <div class="slide6">
   <div class="scroll_down">
-<img src="assets/scan_2.jpg">
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_2.jpg">
 </div>
  </div>
 
      <div class="slide3">
          <div class="scroll_down">
- <img src="assets/scan_3.jpg">
+ <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_3.jpg">
  </div>
      </div>
 
         <div id="slide2">
        <div class="scroll_right">
-              <img class="yellow2" src="assets/scan_4.jpg">
-             <img class="yellow" src="assets/scan_5_1.jpg">
+              <img class="yellow2" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_4.jpg">
+             <img class="yellow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_5_1.jpg">
        </div>
         </div>
         <div id="slide2_2">
        <div class="scroll_right">
-              <img  src="assets/scan_4.jpg">
+              <img  src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_4.jpg">
 
        </div>
         </div>
 
    <div id="slide1">
       <div class="scroll_down">
-  <img class="slide_img"src="assets/scan_5.jpg">
+  <img class="slide_img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_5.jpg">
   <div class="shape1">
-  <x-model id="xd_model" src="assets/scene.gltf"></x-model>
+  <x-model id="xd_model" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scene.gltf"></x-model>
      </div>
    </div>
    </div>
 
     <div class="slide4">
        <div class="scroll_down">
-<img src="assets/scan_6.jpg">
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_6.jpg">
 </div>
     </div>
 
 
     <div class="slide10">
         <div class="scroll_down">
-      <img src="assets/scan_7.jpg">
+      <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_7.jpg">
     <!-- <img src="assets/scan_10_1.jpg"> -->
       </div>
     </div>
 
     <div class="slide12">
       <div class="scroll_down">
-      <img src="assets/scan_10_2.jpg">
+      <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_10_2.jpg">
         </div>
       <!-- <img src="assets/scan_7_1.jpg"> -->
     </div>
 
 <div class="slide7">
   <div class="scroll_down">
-<img src="assets/scan_12_1.jpg">
+<img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_12_1.jpg">
 </div>
 </div>
 
 <div class="slide8">
   <div class="scroll_down">
-  <img src="assets/scan_11_3.jpg">
+  <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_11_3.jpg">
 </div>
 </div>
 
 <div class="slide9">
   <div class="scroll_right">
-  <img src="assets/scan_10_3.jpg">
+  <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_10_3.jpg">
   </div>
 </div>
 
@@ -294,9 +295,18 @@
 <script src="assets/jquery.js"></script>
 
 <script src="assets/nav.js"></script>
-<script src="assets/three.min.js"></script>
-<script src="assets/OBJLoader.js"></script>
-<script src="assets/GLTFLoader.js"></script>
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+<!-- <script src="assets/three.min.js"></script> -->
+<!-- <script src="assets/OBJLoader.js"></script> -->
+<!-- <script src="assets/GLTFLoader.js"></script> -->
 
   </body>
   </html>

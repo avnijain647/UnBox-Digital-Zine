@@ -118,6 +118,16 @@ overflow: scroll;
   height:28%;
 
 }
+#slide2_2{
+    z-index: 1;
+
+  position:absolute;
+  top:0;
+  left:33.3%;
+  width:0;
+  height:0;
+
+}
 .scroll_left,
 .scroll_right{
 position: relative;
@@ -127,21 +137,33 @@ width:100%; */
 }
 .yellow{
   width:100%;
+
   top:0;
   left:0;
   position: absolute;
 }
 .yellow2{
+  background: red;
+  overflow:hidden;
   width:100%;
-  height:100%;
+  transform-origin: top left;
+transform: scale(.98);
   top:0;
   left:100%;
   position: absolute;
 }
 .slide1{
+  animation: slide 1s linear;
 left:0;
 }
-
+@keyframes slide{
+0%{
+  left:100%;
+}
+100%{
+  left:0;
+}
+}
 .xd_model{
   width:50%;
 }
@@ -173,7 +195,7 @@ width:50%;
   left:66.6%;
   width:33.3%;
   height:28%;
-  background-color: #555;
+  /* background-color: #555; */
 }
 .slide3_1{
 
@@ -187,12 +209,12 @@ width:50%;
   left:0;
   width:33.3%;
   height:28%;
-  background-color: #444;
+  /* background-color: #444; */
 }
 
 .slide5{
   z-index: 9;
-  overflow: scroll;
+  /* overflow: scroll; */
   position:absolute;
   top:28%;
   left:33.3%;
@@ -202,6 +224,7 @@ width:50%;
 
 }
 .scroll_down{
+  overflow: hidden;
 position: relative;
 }
 .scroll_up{
@@ -237,7 +260,7 @@ position: relative;
   left:66.6%;
   width:33.3%;
   height:28%;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 .slide7{
 
@@ -247,7 +270,7 @@ position: relative;
   left:0;
   width:33.3%;
   height:28%;
-  background-color: #444;
+  /* background-color: #444; */
 }
 
 .slide8{
@@ -269,7 +292,7 @@ position: relative;
   left:66.6%;
   width:33.3%;
   height:28%;
-  background-color: #444;
+  /* background-color: #444; */
 }
 .slide10{
   z-index: 9;
@@ -278,7 +301,7 @@ position: relative;
   left:0;
   width:33.3%;
   height:28%;
-  background-color: #444;
+  /* background-color: #444; */
 }
 .slide11{
   z-index: 9;
@@ -297,7 +320,7 @@ position: relative;
   left:66.6%;
   width:33.3%;
   height:28%;
-  background-color: #444;
+  /* background-color: #444; */
 }
 .close{
   z-index:15;
@@ -312,7 +335,6 @@ position: relative;
 }
 .click_layer{
   z-index: 12;
-
  /* background-color:rgb(110,210,150, 0.5); */
  position: absolute;
  top: 0;
@@ -360,31 +382,44 @@ height:17%;
 .shape_2shadow{
   pointer-events: all;
 cursor:pointer;
-animation: 5s can cubic-bezier(.50, .08, 0, .99) infinite;
-transform-origin: bottom right;
+animation: 9s can linear infinite;
+/* animation: 2s can cubic-bezier(.50, .08, 0, .99) infinite; */
+transform-origin: center;
 /* background-color:red; */
 position:absolute;
 top:-2%;
-left:49%;
-z-index:9;
-width:50%;
+left:30%;
+z-index:99;
+width:30%;
 height:50%;
 
 }
 @keyframes can {
   0% {
     opacity: 0;
-  transform: rotate(0);
+    top:-2%;
+    left:35%;
+  transform: rotate(0deg);
   }
 
   50% {
     opacity: 1;
-  transform: rotate(-15deg);
+    top:5%;
+    left:40%;
+  transform: rotate(40deg);
   }
   100% {
     opacity: 0;
-  transform: rotate(0);
+    top:25%;
+    left:40%;
+  transform: rotate(35deg);
   }
+  /* 100% {
+    opacity: 0;
+    top:-2%;
+    left:30%;
+  transform: rotate(0);
+  } */
 }
 .shape_2_1{
   pointer-events: all;
@@ -400,37 +435,49 @@ height:10%;
 
 }
 .shape_2_2{
+  transform: skew(10deg);
   pointer-events: all;
 cursor:pointer;
-transform-origin: center;
-/* animation: 3s hit linear infinite; */
+transform-origin:  center;
+animation: 9s hit linear infinite;
 position:absolute;
-top:68%;
-left:24.8%;
+/* background-color: red; */
 z-index:10;
-width:10%;
-height:10%;
-
+width:30%;
+height:30%;
+top:55%;
+left:10%;
 }
 @keyframes hit {
   0% {
+    top:40%;
+    left:10%;
+    width:10%;
+    opacity: 0;
   transform: rotate(0);
   }
   50% {
-  transform: rotate(-15deg);
+    top:50%;
+    width:25%;
+    left:15%;
+    opacity: 1;
+  transform: rotate(25deg);
   }
   100% {
-  transform: rotate(0);
+  width:20%;
+    top:55%;
+    left:16%;
+    opacity: 0;
+  transform: rotate(60deg);
   }
 }
 .link1{
   pointer-events: all;
 cursor:pointer;
-
 position:absolute;
 top:20%;
 right:10%;
-z-index:10;
+z-index:100;
 width:80%;
 height:90%;
 display: none;
@@ -442,7 +489,7 @@ cursor:pointer;
 position:absolute;
 top:20%;
 right:10%;
-z-index:10;
+z-index:100;
 width:80%;
 height:90%;
 display: none;
@@ -468,7 +515,7 @@ height:28%;
   pointer-events: all;
   cursor: pointer;
   position: absolute;
-  top:50%;
+  top:45%;
 left:80%;
   width:20%;
     height:20%;
@@ -549,6 +596,16 @@ width:20%;
 
 .shape1_1 img{
   width:100px;
+}
+
+.click4{
+  z-index: 12;
+position:absolute;
+top:28%;
+left:0;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
 }
 .shape_5 img{
 pointer-events: all;
@@ -855,38 +912,77 @@ video{
   width:100%;
 }
 
+.click9{
+  z-index: 12;
+position:absolute;
+top:56%;
+left:66.6%;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
+}
+.click10{
+  z-index: 12;
+position:absolute;
+top:84%;
+left:0;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
+}
+.click11{
+  z-index: 12;
+position:absolute;
+top:84%;
+left:33.3%;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
+}
+.click12{
+  z-index: 12;
+position:absolute;
+top:84%;
+left:66.6%;
+width:33.3%;
+height:28%;
+/* background-color: rgb(110,210,150, 0.5); */
+}
+
 @media(max-width:600px){
 
   body{
     left:0;
-      height:9000px;
+      height:120000px;
   }
 .scroll_all{
   position:fixed;
+  top:0;
   left: 0;
-  width:9000px;
-  /* height:100vh; */
+  background-color: black;
+  width:120000px;
+  height:100vh;
 }
 .zoom-out,
 .zoom-in{
   display:none;
 }
   #overview{
+      /* background-color: blue; */
     z-index: 8;
    position: absolute;
-   top:0;
-   /* transform: translate(0. -50%); */
-   left: 0;
-   width:9000px;
-   height:100vh;
-   /* background-color: red; */
-
+   top:80px;
+   left: -90vw;
+   /* transform: translate(0, -50%); */
    display:flex;
    flex-wrap: wrap;
+   height:500px;
+   width:120000px;
   }
 
 #slide1,
 #slide2,
+#slide2_2,
 .slide3,
 .slide4,
 .slide5,
@@ -897,11 +993,13 @@ video{
 .slide10,
 .slide11,
 .slide12{
+  overflow: hidden;
   width:180vw;
-  height:158vw;
+  height:125vw;
   position:relative;
   top:0;
   left:0;
+   /* background-color: yellow; */
 }
 
 img{
@@ -909,18 +1007,22 @@ img{
 width:100%;
 }
 
+.yellow2{
+  display:none;
+}
 .click_layer{
-  height:100vh;
+  /* background-color: yellow; */
+height:500px;
   z-index: 12;
- /* background-color:rgb(110,210,150, 0.5); */
  position: absolute;
-top:0;
- /* transform: translate(0. -50%); */
- left: 0;
- /* height:100vh; */
- width:9000px;
- overflow: scroll;
+top:80px;
+
+ left:-90vw;
+ width:120000px;
+
  pointer-events:none;
+    display:flex;
+    flex-wrap: wrap;
 }
 .click1,
 .click2,
@@ -934,12 +1036,14 @@ top:0;
 .click10,
 .click11,
 .click12{
+  /* background-color: green; */
+  overflow: hidden;
   z-index: 12;
 position:relative;
 top:0;
 left:0;
 width:180vw;
-height:158vw;
+height:125vw;
 }
 
 }

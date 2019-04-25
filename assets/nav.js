@@ -19,7 +19,7 @@ $(document).ready(()=> {
 
 var windowWidth = $(window).width()
 if(windowWidth<500){
-$('.scroll_all').css('background-color', 'red')
+// $('.scroll_all').css('background-color', 'red')
   $(document).hide('.zoom-in')
   	$(".click_layer").css({"height":100 + 'vh', "width":9000})
   $(document).hide('.zoom-in')
@@ -186,12 +186,12 @@ $('.close').on('click',function (){
                 $('.link6_2').removeClass('show')
 $('.link1_1').removeClass('show')
 })
-$('.shape_2').on('click',function (){
+$('.shape_2shadow').on('mouseenter',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1').addClass('show')
 
 })
-$('.shape_2_1', ).on('click',function (){
+$('.shape_2_2', ).on('mouseenter',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1_1').addClass('show')
 

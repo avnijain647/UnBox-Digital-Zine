@@ -955,6 +955,8 @@ height:28%;
       height:2340vw;
   }
 .scroll_all{
+  transform: translateZ(0);
+  background-size: cover;
   position:fixed;
   top:0;
   left: 0;

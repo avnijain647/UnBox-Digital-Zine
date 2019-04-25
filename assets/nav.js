@@ -21,9 +21,9 @@ var windowWidth = $(window).width()
 if(windowWidth<500){
 // $('.scroll_all').css('background-color', 'red')
   $(document).hide('.zoom-in')
-  	$(".click_layer").css({"height":100 + 'vh', "width":9000})
+  	$(".click_layer").css({"height":100 + 'vh', "width":10000})
   $(document).hide('.zoom-in')
-  	$("#overview").css({"height":100 + 'vh', "width":9000})
+  	$("#overview").css({"height":100 + 'vh', "width":10000})
     $(document).hide('.zoom-out')
     $(document).hide('.zoom-in')
   , true}

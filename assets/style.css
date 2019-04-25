@@ -953,14 +953,14 @@ height:28%;
 
   body{
     left:0;
-      height:120000px;
+      height:10000px;
   }
 .scroll_all{
   position:fixed;
   top:0;
   left: 0;
   background-color: black;
-  width:120000px;
+  width:10000px;
   height:100vh;
 }
 .zoom-out,
@@ -977,7 +977,7 @@ height:28%;
    display:flex;
    flex-wrap: wrap;
    height:500px;
-   width:120000px;
+   width:10000px;
   }
 
 #slide1,
@@ -1018,7 +1018,7 @@ height:500px;
 top:20px;
 
  left:-90vw;
- width:120000px;
+ width:10000px;
 
  pointer-events:none;
     display:flex;

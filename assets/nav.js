@@ -1,21 +1,5 @@
 
-    // 
-    // document.addEventListener('scroll', function (event) {
-    //     if (event.target.id === 'slide1_1') { // or any other filtering condition
-    //         console.log('scrolling', event.target)
-    //
-    //         var pixel = $('#slide1_1').scrollTop()
-    //         // var documentHeight2 = $(".slide2_body").height()
-    //         // var windowHeight2 = $('#slide2').height()
-    //         //
-    //         // var difference2 = documentHeight2 - windowHeight2
-    //         // var percentage = 100 * pixel / difference2
-    //    $('#x-model').css({'top': +2 * pixel , 'left': -1 * pixel  })
-    //             // $('.scroll_side').css('left', -1 * pixel)
-    //                 // $('.fixed_side').css('top', -1 * pixel)
-    //           console.log(pixel)
-    //     }
-    // }, true /*Capture event*/)
+
 
     $(document).ready( function scroll_to(init_top, init_left){
       var init_top = $("#overview").offset().top+575;
@@ -33,32 +17,10 @@ var windowWidth = $(window).width()
 
       var window_height = $(window).height();
       var window_width= $(window).width();
-      //
-      // function scroll_to(init_top,init_left) {
-      // 	$(document).animate({
-      // 		scrollTop: init_top,
-      // 		scrollLeft:init_left
-      // 	}, 0.1);
-      // }
 
-
-
-
-
-// $(".click_layer").css({"height":2200 + "width":2600})
-// $(".click_layer").css('pointer-events', 'none')
       	var image_width = $("#overview").width()
       	var image_height = $("#overview").height()
 
-
-      	// $("#center").css({'top': image_height/2 , 'left': image_width/2 });
-
-  //
-  //       var init_top = $("#overview").offset().top+800;
-	//      var init_left = $("#overview").offset().left+700;
-  // console.log(init_left)
-  // console.log(init_top)
-  //     	scroll_to(init_top,init_left)
 
   var image_width = $("#overview").width()
   var image_height = $("#overview").height()

@@ -15,6 +15,22 @@ var windowWidth = $(window).width()
 
     })
 
+    $(document).ready(function() {
+
+    var windowWidth = $(window).width()
+    if(windowWidth<600){
+    // $('.scroll_all').css('background-color', 'red')
+      $(document).hide('.zoom-in')
+      	$(".click_layer").css({"height":100 + 'vh', "width":2340 + "vw"})
+      $(document).hide('.zoom-in')
+      	$("#overview").css({"height":100 + 'vh', "width":2340 + "vw"})
+        $(document).hide('.zoom-out')
+        $(document).hide('.zoom-in')
+      , true}
+
+    console.log(windowWidth)
+    })
+
       var window_height = $(window).height();
       var window_width= $(window).width();
 

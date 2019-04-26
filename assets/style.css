@@ -1389,12 +1389,9 @@ width:100%;
   display:none;
 }
 .click_layer{
-  /* background-color: yellow; */
-/* height:500px; */
   z-index: 12;
  position: absolute;
 height:100vh;
-
  left:-90vw;
  width:2340vw;
 

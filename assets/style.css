@@ -340,7 +340,7 @@ position: relative;
  left: 0;
  height: 2200px;
  width:2600px;
- overflow: scroll;
+ overflow: visible;
  pointer-events:none;
 
 }
@@ -430,74 +430,78 @@ left:46.5%;
   pointer-events: all;
 cursor:pointer;
 transform-origin: center;
+transform: rotate(5deg);
+/* background-color: red; */
 /* transform: rotate(90deg); */
 /* animation: 3s hit linear infinite; */
 position:absolute;
-top:66%;
-left:26%;
+top:70%;
+left:25%;
 z-index:10;
-width:8%;
-height:8%;
+width:6.5%;
+height:6.5%;
 
 }
 .shape_2_2{
   /* transform: skew(10deg); */
   pointer-events: all;
 cursor:pointer;
-transform-origin:  bottom left;
+transform-origin: bottom left;
 animation: 6s hit linear infinite;
 position:absolute;
 /* background-color: red; */
 z-index:10;
 width:5%;
 height:5%;
-top:69.5%;
-left:29%;
+top:71.8%;
+left:27%;
 }
 @keyframes hit {
   0% {
     /* top:40%;
     left:10%; */
-
+height:5%;
     opacity: 0;
-  transform: rotate(0) scale(1.2);
+  transform: rotate(0) scale(1.5)skewX(1)skewY(1);
   }
   50% {
     /* top:50%;
     width:25%; */
 
-    opacity: 1;
-  transform: rotate(5deg)scale(1.35);
+    opacity: .8;
+
   }
   100% {
+    height:3%;
   /* transform:scale(1.8); */
     /* top:55%;
     left:16%; */
     opacity: 0;
-  transform: rotate(12deg)scale(1.5);
+  transform: rotate(0)scale(2)skewX(10deg)skewY(10deg);
   }
 }
 .link1{
   pointer-events: all;
 cursor:pointer;
 position:absolute;
-top:20%;
-right:10%;
+top:5%;
+right:5%;
 z-index:100;
-width:80%;
+width:45%;
 height:90%;
 display: none;
 }
 .link1_1{
   pointer-events: all;
 cursor:pointer;
-/* background-color: red; */
+background-color: red;
 position:absolute;
-top:20%;
-right:10%;
+top:40%;
+transform: translate();
+left:5%;
 z-index:100;
-width:80%;
-height:90%;
+width:45%;
+height:40%;
 display: none;
 }
 .click2{
@@ -521,13 +525,24 @@ height:28%;
   pointer-events: all;
   cursor: pointer;
   position: absolute;
-  top:45%;
+  top:40%;
 left:80%;
-  width:20%;
-    height:20%;
+  width:15%;
+    height:15%;
     transform-origin: center;
     transform: rotate(-90deg);
-  /* animation: 1s move_y linear infinite; */
+  animation: 1.4s move_y linear infinite;
+}
+@keyframes move_y{
+  0%{
+left:80%;
+  }
+  50%{
+left:82%;
+  }
+  100%{
+    left:80%;
+  }
 }
 .hand3{
     cursor: pointer;
@@ -550,60 +565,174 @@ width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
-.shape_1{
-    pointer-events: all;
-  cursor:pointer;
-/* background-color: red; */
-  position:relative;
-  top:65%;
-  left:10%;
-z-index:10;
-width:20%;
-height:20%;
+.click3_1{
+  z-index: 12;
+position:absolute;
+top:0;
+left:66.6%;
+width:0;
+height:0;
+/* background-color: rgb(110,210,150, 0.5); */
 }
 .link3{
-  position:absolute;
-  top:10px;
-  left:-40px;
-  display:none;
-}
 
+  z-index: 16;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  /* background-color: rgb(110,210,150, 0.5); */
+}
+.audio1{
+  cursor: pointer;
+pointer-events: all;
+  position:relative;
+  top:40%;
+  left:20%;
+  transform: translate(-80%, -60%);
+  width:20%;
+  height:30%;
+  /* background-color: yellow; */
+}
+.audio2{
+  cursor: pointer;
+pointer-events: all;
+  position:relative;
+  top:22%;
+  left:50%;
+  transform: translate(-50%, -78%);
+  width:20%;
+  height:30%;
+  /* background-color: red; */
+}
+.audio3{
+  cursor: pointer;
+pointer-events: all;
+  position:relative;
+  top:-55%;
+  left:55%;
+  /* transform: translate(-20%, -90%); */
+  width:20%;
+  height:30%;
+  /* background-color: blue; */
+}
+.audio4{
+  cursor: pointer;
+pointer-events: all;
+  position:relative;
+  top:-54%;
+  left:75%;
+  /* transform: translate(-95%, -80%); */
+  width:20%;
+  height:30%;
+  /* background-color: green; */
+}
+ audio{
+   position: absolute;
+  width:120%;
+  height:30%;
+}
 .show{
     display:block;
 }
 
-.shape_1 img{
-cursor: pointer;
-top:120px;
-left:50px;
-width:20%;
-}
+.shape_1{
 
+/* background-color: red; */
+  position:relative;
+  top:0;
+  left:0;
+z-index:10;
+width:100%;
+height:100%;
+}
 .shape1_1{
-  transform-origin: top left;
-  width:40%;
+  z-index:16;
+  pointer-events:all;
+  cursor: pointer;
+position: absolute;
+  width:10%;
+  overflow: hidden;
+  top:62%;
+  left:27%;
+  /* background-color: blue; */
+
+
+}
+.shape1_2{
+  /* perspective: 2000; */
+  /* transform-style: preserve-3d; */
+  /* preserve-3dstyle: 3d-style; */
+  z-index:15;
+  position: absolute;
+  pointer-events: all;
+cursor:pointer;
+  transform-origin: 0 25;
+  /* width:20%; */
+  top:72%;
+  left:26%;
   overflow: hidden;
   /* background-color: blue; */
-  transform:rotate(-40DEG);
-    animation: 3s wide linear infinite;
+  /* transform:rotate(-40DEG); */
+    animation: 6s wide linear infinite;
 }
-
 @keyframes wide {
   0% {
-    width:0;
+    opacity:0;
+
+    width:10%;
   }
   50%{
-    width:40%;
+  opacity:1;
   }
   100% {
-    width:0;
+
+    opacity:0;
+    width:20%;
   }
 }
 
-.shape1_1 img{
-  width:100px;
-}
 
+.shapewheel{
+  z-index:16;
+  pointer-events:all;
+  cursor: pointer;
+position: absolute;
+  width:7.5%;
+  overflow: hidden;
+  top:59%;
+  left:3%;
+
+
+}
+.shapewheelshadow{
+  /* perspective: 2000; */
+  /* transform-style: preserve-3d; */
+  /* preserve-3dstyle: 3d-style; */
+  z-index:17;
+  position: absolute;
+  transform-origin: center;
+  width:3%;
+  top:61%;
+  left:5%;
+  overflow: hidden;
+  /* background-color: blue; */
+  /* transform:rotate(-40DEG); */
+    animation: 2s wheel linear infinite;
+}
+@keyframes wheel {
+  0% {
+  transform: rotate(0);
+
+  }
+
+  100% {
+    transform: rotate(360deg);
+
+  }
+}
 .click4{
   z-index: 12;
 position:absolute;
@@ -613,34 +742,114 @@ width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
-.shape_5 img{
+.shape4{
+  position:relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+}
+.shape_4{
+  position: absolute;
+  top:71.5%;
+  left:64%;
+  width:5%;
+  height:5%;
+  z-index:15;
+    /* background-color: rgb(110,210,150, 0.5); */
+}
+.shape_4_1{
+  z-index:14;
+  position: absolute;
+  top:74%;
+  left:66.5%;
+  width:4%;
+  height:4%;
+  transform-origin: left;
+    /* background-color: rgb(110,210,150, 0.5); */
+    animation: bottle 6s linear infinite;
+}
+/* @keyframes cup{
+  0%{
+    opacity: 0;
+transform: scale(.8) rotate(5deg);
+  }
+  50%{
+    opacity: 1;
+
+  }
+  100%{
+    opacity: 0;
+    transform: scale(2)rotate(0deg);
+  }
+} */
+.shape5{
+
+}
+.ball{
 pointer-events: all;
+z-index:15;
 /* background-color: blue; */
 cursor: pointer;
 position: absolute;
-top:50%;
-left:50%;
-animation:10s frisbee linear infinite;
-width:10%;
-height:10%;
+/* top:70%; */
+left:90%;
+animation: 3s ball linear infinite;
+width:7%;
+height:7%;
 }
-@keyframes frisbee{
+@keyframes ball{
   0% {
-    top:20%;
-    left:30%;
+  top:82%;
   }
   50% {
-    top:70%;
-    left:80%;
+  top:88%;
   }
-  75% {
-    top:90%;
-    left:50%;
-  }
+
   100% {
-    top:20%;
-    left:30%;
+    top:82%;
   }
+}
+.ball_shadow{
+  width:10%;
+  height:10%;
+  position: absolute;
+  top:90%;
+  left:88%;
+  /* background-color:red; */
+  animation: 3s ballshadow linear infinite;
+  transform-origin: center;
+  transform: rotate(40deg);
+}
+@keyframes ballshadow{
+  0% {
+    /* top:30%; */
+    transform: scale(.5)rotate(20deg);
+  opacity: 0;
+    /* left:30%; */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(.3)rotate(20deg);
+    /* top:35%; */
+    /* left:80%; */
+  }
+
+  100% {
+    transform: scale(.5)rotate(20deg);
+  opacity: 0;
+    /* top:30%; */
+    /* left:30%; */
+  }
+}
+.click5{
+  z-index: 12;
+position:absolute;
+top:28%;
+left:33.3%;
+width:33.3%;
+height:28%;
 }
 .click6{
   z-index: 12;
@@ -811,30 +1020,7 @@ display: none;
 .show{
   display: block;
 }
-.shape_7 img{
-  pointer-events: all;
-transform-origin: center;
-  cursor: pointer;
-  position: absolute;
-  top:50%;
-  left:50%;
-  animation:2s tip linear infinite;
-  width:30%;
-  height:30%;
-transform-style: preserve-3d;
-perspective: 20;
-}
-@keyframes tip{
-  0%{
-    transform: rotateZ(0);
-  }
-  50%{
-      transform: rotateZ(20deg);
-  }
-  100%{
-      transform: rotateZ(0);
-  }
-}
+
 .click7{
   z-index: 12;
 position:absolute;
@@ -844,17 +1030,51 @@ width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
-.link7{
+.shape7{
+
+/* background-color: red; */
+position:relative;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+.shape_7{
+  z-index:14;
   pointer-events: all;
 cursor:pointer;
-/* background-color: red; */
 position:absolute;
-top:20%;
-left:10%;
-width:80%;
-z-index:14;
-display: none;
-
+top:40%;
+left:70%;
+transform-origin: center;
+transform:rotate(-45deg);
+width:20%;
+height:20%;
+}
+.shape_7_1{
+  z-index:14;
+  pointer-events: all;
+cursor:pointer;
+transform-origin: left;
+position:absolute;
+top:48%;
+left:72%;
+width:15%;
+height:15%;
+animation: racket 6s linear infinite;
+}
+@keyframes racket {
+  0%{
+opacity: 0;
+transform: rotate(0)scale(1);
+  }
+  50%{
+opacity: 1;
+  }
+  100%{
+opacity: 0;
+transform: rotate(25deg) scale(1.8);
+  }
 }
 .click8{
   z-index: 12;
@@ -927,6 +1147,57 @@ width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
+.shape9{
+/* background-color: red; */
+position:relative;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+.shape_9{
+  /* background-color: red; */
+  z-index:14;
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+transform: rotate(-10deg);
+transform-origin: center;
+top:10%;
+left:66%;
+width:12%;
+height:12%;
+}
+.shape_9_1{
+  transform: rotate(-24deg);
+  /* background-color: red; */
+  z-index:13;
+  pointer-events: all;
+cursor:pointer;
+transform-origin: left;
+position:absolute;
+top:12%;
+left:66.5%;
+width:12%;
+height:12%;
+animation: pin 6s linear infinite;
+}
+@keyframes pin {
+  0%{
+    opacity: 1;
+    transform: rotate(-10deg) skewX(20deg);
+}
+  50%{
+
+  opacity: 1;
+  transform: rotate(-5deg) skewX(0);
+  }
+
+  100%{
+    opacity: 1;
+    transform: rotate(-10deg) skewX(20deg);
+  }
+}
 .click10{
   z-index: 12;
 position:absolute;
@@ -936,7 +1207,57 @@ width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
+
+.shape10{
+/* background-color: red; */
+position:relative;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+.shape_10{
+  /* background-color: red; */
+  z-index:14;
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+top:12%;
+left:85%;
+width:12%;
+height:12%;
+}
+.shape_10_1{
+  /* background-color: red; */
+  z-index:13;
+  pointer-events: all;
+cursor:pointer;
+transform-origin: left;
+position:absolute;
+top:20%;
+left:93%;
+width:6%;
+height:6%;
+animation: bottle 6s linear infinite;
+}
+@keyframes bottle {
+  0%{
+    /* height:5%; */
+opacity: 0;
+transform: scale(.5) rotate(-40deg)skewY(20deg) skewX(50deg);
+  }
+  50%{
+opacity: 1;
+  }
+  100%{
+    /* height:5%; */
+opacity: 0;
+transform:  scale(1)rotate(-40deg) skewY(20deg) skewX(50deg);
+  }
+}
+
 .click11{
+  overflow: visible;
   z-index: 12;
 position:absolute;
 top:84%;
@@ -944,6 +1265,53 @@ left:33.3%;
 width:33.3%;
 height:28%;
 /* background-color: rgb(110,210,150, 0.5); */
+}
+.shape11{
+/* background-color: red; */
+position:relative;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+.shape_11{
+  /* background-color: red; */
+  z-index:14;
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+top:73%;
+left:32%;
+width:12%;
+height:12%;
+}
+.shape_11_1{
+  /* background-color: red; */
+  z-index:13;
+  pointer-events: all;
+cursor:pointer;
+transform-origin: left;
+position:absolute;
+top:83%;
+left:37%;
+width:6%;
+height:6%;
+animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  0%{
+    /* height:5%; */
+opacity: 0;
+transform: scale(.5) rotate(-40deg)skewY(20deg) skewX(50deg);
+  }
+  50%{
+opacity: 1;
+  }
+  100%{
+    /* height:5%; */
+opacity: 0;
+transform:  scale(1)rotate(-40deg) skewY(20deg) skewX(50deg);
+  }
 }
 .click12{
   z-index: 12;
@@ -1037,6 +1405,7 @@ height:100vh;
 .click1,
 .click2,
 .click3,
+.click3_1,
 .click4,
 .click5,
 .click6,
@@ -1055,6 +1424,9 @@ top:50%;
 left:0;
 width:180vw;
 height:125vw;
+}
+.hand2{
+  display:none;
 }
 
 }

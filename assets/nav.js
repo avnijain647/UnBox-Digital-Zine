@@ -10,8 +10,7 @@ var windowWidth = $(window).width()
 
       $('html,body').animate({
      scrollTop: init_top,
-      scrollLeft:init_left}, 300), true
-}
+      scrollLeft:init_left}, 300), true}
 
     })
 
@@ -19,16 +18,16 @@ var windowWidth = $(window).width()
 
     var windowWidth = $(window).width()
     if(windowWidth<600){
-    // $('.scroll_all').css('background-color', 'red')
+
       $(document).hide('.zoom-in')
       	$(".click_layer").css({"height":100 + 'vh', "width":2340 + "vw"})
       $(document).hide('.zoom-in')
       	$("#overview").css({"height":100 + 'vh', "width":2340 + "vw"})
         $(document).hide('.zoom-out')
-        $(document).hide('.zoom-in')
-      , true}
+        $(document).hide('.zoom-in'), true}
 
-    console.log(windowWidth)
+
+
     })
 
       var window_height = $(window).height();
@@ -37,69 +36,69 @@ var windowWidth = $(window).width()
       	var image_width = $("#overview").width()
       	var image_height = $("#overview").height()
 
-
-  var image_width = $("#overview").width()
-  var image_height = $("#overview").height()
-// $("#slide1").css('opacity', 0);
 $('#overview').on('click', function(e){
-var windowWidth = $(window).width()
+  $("#overview").css({"height":84 + 'vw', "width":window_width})
+    $(".click_layer").css({"height":84 + 'vw', "width":window_width})
 
+var windowWidth = $(window).width()
+var offset_top = event.pageY;
+var offset_left = event.pageX;
+
+var overview_image_width = $("#overview").width()
+var overview_image_height = $("#overview").height()
+
+ var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
+var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
             if($('.zoom-out').is(':visible') && windowWidth>600){
 
             $("#overview").removeClass("zoom-out").addClass("zoom-in")
-      			// $(".overview").removeClass("zoom-out").addClass("zoom-in");
-      			// if($("#center").length != 0) {
-      			// 	$("#center").remove();
-      			// }
-      			$("#overview").css({"height":84 + 'vw', "width":window_width})
-            	$(".click_layer").css({"height":84 + 'vw', "width":window_width})
 
-            scroll_to({'top':0,'left':0})
 
-            // console.log(window_height);
+
+          $('html, body').animate({scrollTop:top - offset_top, scrollLeft:0},500);
+    console.log(top)
+
 }else if (windowWidth>600){
-  // $(".overview.zoom-in").on('click',function(){
+
 
 
        var offset_top = event.pageY;
        var offset_left = event.pageX;
-       // var window_height = $(window).height();
-       // var window_width= $(window).width();
-       // var image_width = $(".overview").width()
-       // var image_height = $(".overview").height()
+
        var overview_image_width = $("#overview").width()
        var overview_image_height = $("#overview").height()
+
 
        // var top = Math.round(((offset_top*image_height)/2600)-(window_height));
        // var left = Math.round(((offset_left*image_width)/2200)-(window_width));
       //  var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
  			// var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
-    // document.scrollTo(top,left)
-$('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left},50);
+
+$('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left}, 300);
 $("#overview").removeClass("zoom-in").addClass("zoom-out")
 $("#overview").css({"height":2200, "width":2600})
   // $(".click_layer").css('opacity',0)
 
 $(".click_layer").css({"height":2200 , "width":2600})
-    //   $('html,body').animate({
-    //  scrollTop: top,
-    //   scrollLeft:left}, 300);
-    //
-    //
-    // })
-       console.log(top)
-       // console.log(left)
-    //    $(this).removeClass("zoom-in").addClass("zoom-out")
-    //    var this_top = $(this).offset().top
-    //    var this_left = $(this).offset().left
-    //    $(this).css({"height":overview_image_height, "width":overview_image_width})
-    //    scroll_to(this_top,this_left)
-    // console.log(this)
-    //  })
+
 
 
 }
+else if ($('.zoom-in').is(':visible') && windowWidth>600){
 
+  //        var offset_top = event.pageY;
+  //        var offset_left = event.pageX;
+  //
+  //        var top = Math.round((offset_top*image_height)-(window_height));
+  //        var left = Math.round((offset_left*image_width)-(window_width));
+  // $("#overview").removeClass("zoom-in").addClass("zoom-out")
+  //
+  // $("#overview").css({"height":84 + 'vw', "width":window_width})
+  //   $(".click_layer").css({"height":84 + 'vw', "width":window_width})
+  //
+  // $('html, body').animate({scrollTop:top, scrollLeft:0},1);
+
+}
 
 
 })
@@ -163,10 +162,15 @@ $('.shape_6_2').on('click',function (){
 //
 // 	var window_height = $(this).height();
 //
-// 	$(".overview").delay(250).css({
+// 	$("#overview").delay(250).css({
 // 		// "height":100 + 'vh',
 // 		// "width":100 + 'vw'
-// 	});
+// 	})
+// 	$(".click_layer").delay(250).css({
+// 		// "height":100 + 'vh',
+// 		// "width":100 + 'vw'
+// 	})
+
 //
 // });
 

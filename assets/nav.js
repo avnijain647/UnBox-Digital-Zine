@@ -17,12 +17,12 @@ var windowWidth = $(window).width()
     $(document).ready(function() {
 
     var windowWidth = $(window).width()
-    if(windowWidth<600){
+    if(windowWidth<500){
 
       $(document).hide('.zoom-in')
-      	$(".click_layer").css({"height":100 + 'vh', "width":2340 + "vw"})
+      	$(".click_layer").css({"height":100 + 'vh', "width":2840 + "vw"})
       $(document).hide('.zoom-in')
-      	$("#overview").css({"height":100 + 'vh', "width":2340 + "vw"})
+      	$("#overview").css({"height":100 + 'vh', "width":2840 + "vw"})
         $(document).hide('.zoom-out')
         $(document).hide('.zoom-in'), true}
 
@@ -37,22 +37,25 @@ var windowWidth = $(window).width()
       	var image_height = $("#overview").height()
 
 $('#overview').on('click', function(e){
-  $("#overview").css({"height":84 + 'vw', "width":window_width})
-    $(".click_layer").css({"height":84 + 'vw', "width":window_width})
+  var windowWidth = $(window).width()
+  var offset_top = event.pageY;
+  var offset_left = event.pageX;
 
-var windowWidth = $(window).width()
-var offset_top = event.pageY;
-var offset_left = event.pageX;
+  var overview_image_width = $("#overview").width()
+  var overview_image_height = $("#overview").height()
 
-var overview_image_width = $("#overview").width()
-var overview_image_height = $("#overview").height()
+   var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
+  var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
 
- var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
-var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
+
             if($('.zoom-out').is(':visible') && windowWidth>600){
 
-            $("#overview").removeClass("zoom-out").addClass("zoom-in")
 
+
+
+            $("#overview").removeClass("zoom-out").addClass("zoom-in")
+            $("#overview").css({"height":84 + 'vw', "width":window_width})
+              $(".click_layer").css({"height":84 + 'vw', "width":window_width})
 
 
           $('html, body').animate({scrollTop:top - offset_top, scrollLeft:0},500);
@@ -84,27 +87,32 @@ $(".click_layer").css({"height":2200 , "width":2600})
 
 
 }
-else if ($('.zoom-in').is(':visible') && windowWidth>600){
 
-  //        var offset_top = event.pageY;
-  //        var offset_left = event.pageX;
-  //
-  //        var top = Math.round((offset_top*image_height)-(window_height));
-  //        var left = Math.round((offset_left*image_width)-(window_width));
-  // $("#overview").removeClass("zoom-in").addClass("zoom-out")
-  //
-  // $("#overview").css({"height":84 + 'vw', "width":window_width})
-  //   $(".click_layer").css({"height":84 + 'vw', "width":window_width})
-  //
-  // $('html, body').animate({scrollTop:top, scrollLeft:0},1);
-
-}
 
 
 })
 $('.hand2').on('click',function (){
 
-          $(".yellow2").toggleClass('slide1')
+          $(".yellow2").toggleClass('slide')
+
+})
+$('.ball').on('click',function (){
+
+          $(".red2").toggleClass('slideup')
+          $(".shape5_2").toggleClass('coffee')
+            $(".shape5_3").toggleClass('coffee')
+
+})
+$('.shape_11').on('mouseenter',function (){
+
+          $(".blue").css('opacity', 1)
+
+
+})
+$('.shape_11').on('mouseleave',function (){
+
+          $(".blue").css('opacity', 0)
+
 
 })
 $('.shape1_1').on('click',function (){
@@ -130,16 +138,41 @@ $('.close').on('click',function (){
               $('.link3').removeClass('show')
               $('.link7').removeClass('show')
                 $('.link6_2').removeClass('show')
+                  $('.link3_1').removeClass('show')
+                    $('.link9').removeClass('show')
+                      $('.link5').removeClass('show')
 $('.link1_1').removeClass('show')
+$('.link4').removeClass('show')
+  $('.link6').removeClass('show')
 })
-$('.shape_2shadow').on('mouseenter',function (){
+$('.shape_2').on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1').addClass('show')
 
 })
-$('.shape_2_2', ).on('mouseenter',function (){
+$('.shape_2_1', ).on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1_1').addClass('show')
+
+})
+$('.shapewheel', ).on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link3_1').addClass('show')
+
+})
+$('.shape_4', ).on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link4').addClass('show')
+
+})
+$('.shape5_2').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link5').addClass('show')
+
+})
+$('.shape_6', ).on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link6').addClass('show')
 
 })
 $('.shape_7').on('click',function (){
@@ -152,7 +185,11 @@ $('.shape_6_2').on('click',function (){
           $('.link6_2').addClass('show')
 
 })
+$('.shape_9').on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link9').addClass('show')
 
+})
 
 
 

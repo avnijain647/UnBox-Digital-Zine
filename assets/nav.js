@@ -20,9 +20,9 @@ var windowWidth = $(window).width()
     if(windowWidth<500){
 
       $(document).hide('.zoom-in')
-      	$(".click_layer").css({"height":100 + 'vh', "width":2840 + "vw"})
+      	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
       $(document).hide('.zoom-in')
-      	$("#overview").css({"height":100 + 'vh', "width":2840 + "vw"})
+      	// $("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
         $(document).hide('.zoom-out')
         $(document).hide('.zoom-in'), true}
 
@@ -96,25 +96,32 @@ $('.hand2').on('click',function (){
           $(".yellow2").toggleClass('slide')
 
 })
-$('.ball').on('click',function (){
-
+$('.hand3').on('click',function (){
+  $(".ball").toggleClass('ball_hide')
+    $(".ball_shadow").toggleClass('ball_hide')
           $(".red2").toggleClass('slideup')
           $(".shape5_2").toggleClass('coffee')
             $(".shape5_3").toggleClass('coffee')
 
 })
-$('.shape_11').on('mouseenter',function (){
+$('.hand4').on('click',function (){
 
-          $(".blue").css('opacity', 1)
-
-
-})
-$('.shape_11').on('mouseleave',function (){
-
-          $(".blue").css('opacity', 0)
+          $(".blue").toggleClass('slideup')
 
 
 })
+$('.shape_11').on('click',function (){
+
+          $(".link11").addClass('show')
+
+
+})
+// $('.hand4').on('mouseleave',function (){
+//
+//           $(".blue").css('opacity', 0)
+//
+//
+// })
 $('.shape1_1').on('click',function (){
 
           $(".link3").toggleClass('show')
@@ -141,6 +148,8 @@ $('.close').on('click',function (){
                   $('.link3_1').removeClass('show')
                     $('.link9').removeClass('show')
                       $('.link5').removeClass('show')
+                        $(".link11").removeClass('show')
+                        $('.link5_1').removeClass('show')
 $('.link1_1').removeClass('show')
 $('.link4').removeClass('show')
   $('.link6').removeClass('show')
@@ -163,6 +172,11 @@ $('.shapewheel', ).on('click',function (){
 $('.shape_4', ).on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link4').addClass('show')
+
+})
+$('.ball', ).on('click',function (){
+// $('.link8').css('background-color', 'red')
+          $('.link5_1').addClass('show')
 
 })
 $('.shape5_2').on('click',function (){

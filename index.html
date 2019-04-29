@@ -27,7 +27,6 @@
 <script   src="assets/GLTFLoader.js"></script>
 
 
-</script>
 </head>
 <body>
   <div class="scroll_all">
@@ -82,9 +81,10 @@
    <div id="slide1">
       <div class="scroll_down">
   <img class="red" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scan_5.jpg">
-  <div class="shape1">
-  <x-model id="xd_model" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="assets/scene.gltf"></x-model>
-     </div>
+
+   </div>
+   <div class="shape1">
+     <x-model id="threed" src="assets/scene.gltf"></x-model>
    </div>
    </div>
 
@@ -403,6 +403,9 @@
 
 <script  src="assets/jquery.js"></script>
 <script   src="assets/nav.js"></script>
+<script  src="assets/three.min.js"></script>
+<script   src="assets/OBJLoader.js"></script>
+<script   src="assets/GLTFLoader.js"></script>
 <script>
 function init() {
 var imgDefer = document.getElementsByTagName('img');

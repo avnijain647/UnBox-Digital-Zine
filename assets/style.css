@@ -45,29 +45,9 @@ img{
   left:0;
   width:33.3%;
   height:28%;
+  overflow: scroll;
 }
 
-
-x-model {
-
-transform-style: preserve-3d;
-  z-index:10;
-  animation: 5s spin cubic-bezier(.50, .08, 0, .99) infinite;
-  transform: rotateX(-90Deg);
-}
-
-@keyframes spin {
-  0% {
-
-    transform: rotateX(-90Deg);
-    transform: rotateY(0Deg);
-  }
-  100% {
-
-    transform: rotateX(-90Deg);
-    transform: rotateY(360Deg);
-  }
-}
 
 
 
@@ -84,14 +64,7 @@ overflow: scroll;
   height:28%;
   /* height:300px; */
 }
-.slide3d{
-  right:25px;
-  bottom:25px;
-    position: absolute;
-  overflow:auto;
-  width:100%;
-  height:100%;
-}
+
 
 
 #slide2{
@@ -184,10 +157,37 @@ height:100%;
   left:0;
 }
 }
-.xd_model{
-  width:50%;
+.shape1{
+  /* overflow: scroll; */
+  position: absolute;
+  width:100%;
+  height: 100%;
+  /* background-color: blue; */
+  top:0;
+  right:0;
+}
+#threed{
+  overflow: visible;
+  transform-style: preserve-3d;
+  top:80%;
+left:80%;
+  position: absolute;
+  width:20%;
+  height: 20%;
+animation: xd 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 
+
+@keyframes xd {
+  0% {
+    transform: rotateX(-90Deg);
+    transform: rotateY(0Deg);
+  }
+  100% {
+    transform: rotateX(-90Deg);
+    transform: rotateY(360Deg);
+  }
+}
 .slide2_1{
 
 width:100%;
@@ -1488,8 +1488,8 @@ height:28%;
 @media(max-width:600px){
 
   body{
-    left:0;
-      height:100vh;
+
+      /* height:100vh; */
         background-color: black;
   }
 .scroll_all{
@@ -1499,7 +1499,7 @@ height:28%;
   top:0;
   left: 0;
  width:2860vw;
- height:100vh;
+ /* height:100vh; */
  /* background-color: red; */
  overflow: hidden;
   /*
@@ -1608,5 +1608,8 @@ height:125vw;
 .shape5_2,
 .shape5_3{
   opacity: 1;
+}
+#x-model-renderLayer{
+  left:1000vw;
 }
 }

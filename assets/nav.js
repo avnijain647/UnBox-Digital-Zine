@@ -17,14 +17,19 @@ var windowWidth = $(window).width()
     $(document).ready(function() {
 
     var windowWidth = $(window).width()
-    if(windowWidth<500){
+    if(windowWidth<600){
 
       $(document).hide('.zoom-in')
       	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
       $(document).hide('.zoom-in')
       	// $("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
         $(document).hide('.zoom-out')
-        $(document).hide('.zoom-in'), true}
+        $(document).hide('.zoom-in')
+        $('.scroll_all').animate({
+       scrollTop: 0,
+        scrollLeft:0}, 100), true}
+
+
 
 
 
@@ -207,7 +212,22 @@ $('.shape_9').on('click',function (){
 
 
 
+document.addEventListener('scroll', function (event) {
+    if (event.target.id === 'slide1') { // or any other filtering condition
+        console.log('scrolling', event.target)
 
+        var pixel = $(document).scrollTop()
+        // var documentHeight2 = $(".slide2_body").height()
+        // var windowHeight2 = $('#slide2').height()
+        //
+        // var difference2 = documentHeight2 - windowHeight2
+        // var percentage = 100 * pixel / difference2
+   $('#x-model-renderLayer').css({'top': -1 * pixel , 'left': -1 * pixel  })
+            // $('.scroll_side').css('left', -1 * pixel)
+                // $('.fixed_side').css('top', -1 * pixel)
+          console.log(pixel)
+    }
+}, true /*Capture event*/)
 
 //   $(window).resize(function(){
 //

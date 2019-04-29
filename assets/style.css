@@ -543,6 +543,7 @@ height:28%;
   position: relative;
 }
 .hand2{
+  display:none;
   z-index: 99;
   pointer-events: all;
   cursor: pointer;
@@ -567,6 +568,7 @@ left:83%;
   }
 }
 .hand3{
+  display:none;
   z-index: 99;
   pointer-events: all;
   cursor: pointer;
@@ -597,10 +599,10 @@ left:90%;
   pointer-events: all;
   cursor: pointer;
   position: absolute;
-  top:44%;
-left:5%;
-  width:15%;
-    height:15%;
+  top:33%;
+left:3%;
+  width:42%;
+    height:42%;
     transform-origin: center;
     transform: rotate(-90deg);
   animation: 1.4s move_x2 linear infinite;
@@ -608,13 +610,13 @@ left:5%;
 }
 @keyframes move_x2{
   0%{
-left:5%;
+left:3%;
   }
   50%{
-left:10%;
+left:4%;
   }
   100%{
-    left:5%;
+    left:3%;
   }
 }
 
@@ -646,6 +648,16 @@ height:0;
 /* background-color: rgb(110,210,150, 0.5); */
 }
 .link3{
+  z-index: 16;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  /* background-color: rgb(110,210,150, 0.5); */
+}
+.link3_1{
   z-index: 16;
   position:absolute;
   top:0;
@@ -705,16 +717,7 @@ pointer-events: all;
   height:30%;
 }
 
-.link3_1{
-  z-index: 16;
-  position:absolute;
-  top:40%;
-  left:5%;
-  width:50%;
-  height:50%;
-  display:none;
-  background-color: rgb(110,210,150, 0.5);
-}
+
 .shape_1{
 
 /* background-color: red; */
@@ -726,7 +729,7 @@ width:100%;
 height:100%;
 }
 .shape1_1{
-  z-index:16;
+  z-index:99;
   pointer-events:all;
   cursor: pointer;
 position: absolute;
@@ -967,7 +970,7 @@ top:32%;
 left:85%;
 width:12%;
 height:12%;
-opacity: 0;
+
 }
 .shape5_3{
   /* background-color: red; */
@@ -981,7 +984,7 @@ left:92%;
 width:6%;
 height:6%;
 animation: bottle 6s cubic-bezier(.50, .08, 0, .99) infinite;
-opacity: 0;
+
 }
 @keyframes bottle {
 

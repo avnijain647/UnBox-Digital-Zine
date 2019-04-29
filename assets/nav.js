@@ -130,6 +130,7 @@ $('.shape_11').on('click',function (){
 $('.shape1_1').on('click',function (){
 
           $(".link3").toggleClass('show')
+            $(".link3_1").toggleClass('show')
 
 })
 $('.shape_6').on('click',function (){

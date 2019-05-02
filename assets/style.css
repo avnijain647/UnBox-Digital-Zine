@@ -17,10 +17,12 @@ body{
 
 #overview{
   z-index: 8;
- position: relative;
+ position: absolute;
+ top:0;
+ left:0;
  height: 2200px;
  width:2600px;
- background-size: contain;
+ /* background-size: contain; */
 }
 
 h1{
@@ -470,8 +472,8 @@ cursor:pointer;
 transform-origin: center;
 transform: rotate(5deg);
 position:absolute;
-top:70%;
-left:25%;
+top:48%;
+left:80%;
 z-index:10;
 width:6.5%;
 height:6.5%;
@@ -488,8 +490,8 @@ position:absolute;
 z-index:10;
 width:5%;
 height:5%;
-top:71.8%;
-left:26%;
+top:49%;
+left:81%;
 }
 @keyframes hit {
   0% {
@@ -594,29 +596,32 @@ left:90%;
   }
 }
 
-.hand4{
+ .hand4{
   z-index: 99;
   pointer-events: all;
   cursor: pointer;
   position: absolute;
-  top:33%;
-left:3%;
-  width:42%;
-    height:42%;
-    transform-origin: center;
+  overflow:hidden;
+  top:30%;
+left:15%;
+  width:16%;
+  /* background-color: red; */
+  /* width:2%; */
+    /* height:20%; */
+    /* transform-origin: center; */
     transform: rotate(-90deg);
   animation: 1.4s move_x2 linear infinite;
 
 }
 @keyframes move_x2{
   0%{
-left:3%;
+left:15%;
   }
   50%{
-left:4%;
+left:16%;
   }
   100%{
-    left:3%;
+    left:15%;
   }
 }
 
@@ -746,7 +751,7 @@ position: absolute;
   /* perspective: 2000; */
   /* transform-style: preserve-3d; */
   /* preserve-3dstyle: 3d-style; */
-  z-index:15;
+  z-index:19;
   position: absolute;
   pointer-events: all;
 cursor:pointer;
@@ -832,48 +837,70 @@ height:28%;
   pointer-events: all;
   cursor: pointer;
   position: absolute;
-  top:71.5%;
-  left:64%;
-  width:5%;
-  height:5%;
-  z-index:15;
+  top:62%;
+  left:66%;
+  width:8%;
+  /* height:15%; */
+  z-index:18;
+  transform-origin: right bottom;
     /* background-color: rgb(110,210,150, 0.5); */
+    animation: cup 3s cubic-bezier(.50, .08, 0, .99) infinite;
+}
+@keyframes cup{
+  0%{
+
+transform:  rotate(0deg);
+  }
+  50%{
+    transform:  rotate(85deg);
+
+  }
+  100%{
+
+    transform:  rotate(0deg);
+  }
 }
 .shape_4_1{
   z-index:14;
   position: absolute;
-  top:74%;
-  left:66.5%;
-  width:4%;
-  height:4%;
+  top:70%;
+  left:72%;
+  width:10%;
+  height:10%;
   transform-origin: left;
     /* background-color: rgb(110,210,150, 0.5); */
-    animation: bottle 6s cubic-bezier(.50, .08, 0, .99) infinite;
+    animation: cup2 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
-/* @keyframes cup{
+@keyframes cup2 {
+
   0%{
-    opacity: 0;
-transform: scale(.8) rotate(5deg);
+transform: translateX(0)scale(.8) skewY(0deg) skewX(0deg);
   }
   50%{
-    opacity: 1;
-
+transform: translateX(20%) scale(1.2) skewY(0deg) skewX(-30deg);
   }
   100%{
-    opacity: 0;
-    transform: scale(2)rotate(0deg);
-  }
-} */
 
+transform: translateX(0)scale(.8) skewY(0deg) skewX(0deg);
+
+  }
+}
 .link4{
+  pointer-events: all;
+  cursor: pointer;
   z-index: 16;
   position:absolute;
-  top:25%;
-  left:5%;
-  width:50%;
-  height:50%;
-  display:none;
-    background-color: rgb(110,210,150, 0.5);
+  top:2%;
+  left:2%;
+  width:95%;
+
+  /* height:100%; */
+display:none;
+  /* background-color: rgb(110,210,150, 0.5); */
+}
+video{
+  outline: none;
+  box-shadow: none;
 }
 .shape_5{
   position: relative;
@@ -883,37 +910,43 @@ transform: scale(.8) rotate(5deg);
   height:100%;
 /* background-color: blue; */
 }
+.shape5{
+
+  width:10%;
+  height:15%;
+  position: absolute;
+  pointer-events: all;
+  z-index:15;
+  top:8%;
+  left:30%;
+  cursor: pointer;
+}
 .ball{
-pointer-events: all;
-z-index:15;
-/* background-color: blue; */
-cursor: pointer;
-position: absolute;
-top:8%;
-left:30%;
+  position: relative;
+  z-index:16;
+  width:50%;
+  height:50%;
 animation: 3s ball cubic-bezier(.50, .08, 0, .99) infinite;
-width:7%;
-height:7%;
 opacity:1;
 }
 @keyframes ball{
   0% {
-  top:8%;
+  transform: translateY(0);
   }
   50% {
-  top:16%;
+  transform: translateY(80%);
   }
 
   100% {
-    top:8%;
+  transform: translateY(0);
   }
 }
 .ball_shadow{
-  width:10%;
-  height:10%;
-  position: absolute;
-  top:18%;
-  left:28%;
+  z-index:14;
+   /* background: red; */
+  width:50%;
+  height:50%;
+  position: relative;
   /* background-color:red; */
   animation: 3s ballshadow cubic-bezier(.50, .08, 0, .99) infinite;
   transform-origin: center;
@@ -922,19 +955,19 @@ opacity:1;
 @keyframes ballshadow{
   0% {
     /* top:30%; */
-    transform: scale(.4)rotate(20deg);
+    transform: scale(.7)rotate(20deg);
 
     /* left:30%; */
   }
   50% {
 
-    transform: scale(.3)rotate(20deg);
+    transform: scale(.5)rotate(20deg);
     /* top:35%; */
     /* left:80%; */
   }
 
   100% {
-    transform: scale(.4)rotate(20deg);
+    transform: scale(.7)rotate(20deg);
 
     /* top:30%; */
     /* left:30%; */
@@ -952,6 +985,8 @@ left:33.3%;
 width:33.3%;
 height:28%;
 }
+
+
 .click5_1{
   z-index: 12;
 position:absolute;
@@ -1020,8 +1055,8 @@ background-color: rgb(110,210,150, 0.5);
 cursor:pointer;
 position:absolute;
 top:25%;
-left:25%;
-width:50%;
+right:10%;
+width:30%;
 height:50%;
 z-index:14;
 display: none;
@@ -1475,6 +1510,26 @@ height:50%;
 z-index:14;
 display: none;
 background-color: rgb(110,210,150, 0.5);
+}
+.shape12{
+/* background-color: red; */
+position:relative;
+top:0%;
+left:0%;
+width:100%;
+height:100%;
+}
+.link12{
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+top:25%;
+right:5%;
+width:60%;
+height:43%;
+z-index:14;
+display: none;
+/* background-color: rgb(110,210,150, 0.5); */
 }
 .click12{
   z-index: 12;

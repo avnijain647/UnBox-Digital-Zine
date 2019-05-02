@@ -111,7 +111,17 @@ $('.hand3').on('click',function (){
 })
 $('.hand4').on('click',function (){
 
-          $(".blue").toggleClass('slideup')
+  if($('.link12').is(':visible')){
+    $('.link12').removeClass('show')
+$('.video12').trigger('pause')
+
+}
+  else{
+    $('.link12').addClass('show')
+$('.video12').trigger('play')
+
+
+  }
 
 
 })
@@ -143,23 +153,7 @@ $('.shape8').on('click',function (){
           $('.link8').addClass('show')
 
 })
-$('.close').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link8').removeClass('show')
-            $('.link1').removeClass('show')
-            $('.link6').removeClass('show')
-              $('.link3').removeClass('show')
-              $('.link7').removeClass('show')
-                $('.link6_2').removeClass('show')
-                  $('.link3_1').removeClass('show')
-                    $('.link9').removeClass('show')
-                      $('.link5').removeClass('show')
-                        $(".link11").removeClass('show')
-                        $('.link5_1').removeClass('show')
-$('.link1_1').removeClass('show')
-$('.link4').removeClass('show')
-  $('.link6').removeClass('show')
-})
+
 $('.shape_2').on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link1').addClass('show')
@@ -175,14 +169,35 @@ $('.shapewheel', ).on('click',function (){
           $('.link3_1').addClass('show')
 
 })
-$('.shape_4', ).on('click',function (){
-// $('.link8').css('background-color', 'red')
+
+$('.shape_4' ).on('click',function (){
+// var vid = document.getElementsByClassName ('link4')
+        if($('.link4').is(':visible')){
+          $('.link4').removeClass('show')
+    $('.video4').trigger('pause')
+
+      }
+        else{
           $('.link4').addClass('show')
+      $('.video4').trigger('play')
+
+
+        }
 
 })
-$('.ball', ).on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link5_1').addClass('show')
+
+$('.shape5', ).on('click',function (){
+  if($('.link5_1').is(':visible')){
+    $('.link5_1').removeClass('show')
+$('.video5').trigger('pause')
+
+}
+  else{
+    $('.link5_1').addClass('show')
+$('.video5').trigger('play')
+
+
+  }
 
 })
 $('.shape5_2').on('click',function (){

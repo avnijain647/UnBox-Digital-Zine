@@ -125,12 +125,7 @@ $('.video12').trigger('play')
 
 
 })
-$('.shape_11').on('click',function (){
 
-          $(".link11").addClass('show')
-
-
-})
 // $('.hand4').on('mouseleave',function (){
 //
 //           $(".blue").css('opacity', 0)
@@ -143,20 +138,46 @@ $('.shape1_1').on('click',function (){
             $(".link3_1").toggleClass('show')
 
 })
-$('.shape_6').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link6').addClass('show')
 
-})
 $('.shape8').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link8').addClass('show')
+  if($('.link8').is(':visible')){
+    $('.link8').removeClass('show')
+  $('.video8_1').trigger('pause')
+  $('.video8_2').trigger('pause')
+  $('.video8_3').trigger('pause')
+  $('.video8_4').trigger('pause')
+  $('.video8_5').trigger('pause')
+  $('.video8_6').trigger('pause')
+
+  }
+  else{
+    $('.link8').addClass('show')
+  $('.video8_1').trigger('play')
+  $('.video8_2').trigger('play')
+  $('.video8_3').trigger('play')
+  $('.video8_4').trigger('play')
+  $('.video8_5').trigger('play')
+  $('.video8_6').trigger('play')
+
+
+
+  }
+
 
 })
 
 $('.shape_2').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link1').addClass('show')
+  if($('.link1').is(':visible')){
+    $('.link1').removeClass('show')
+  $('.video1').trigger('pause')
+
+  }
+  else{
+    $('.link1').addClass('show')
+  $('.video1').trigger('play')
+
+
+  }
 
 })
 $('.shape_2_1', ).on('click',function (){
@@ -186,7 +207,7 @@ $('.shape_4' ).on('click',function (){
 
 })
 
-$('.shape5', ).on('click',function (){
+$('.shape5' ).on('click',function (){
   if($('.link5_1').is(':visible')){
     $('.link5_1').removeClass('show')
 $('.video5').trigger('pause')
@@ -205,24 +226,43 @@ $('.shape5_2').on('click',function (){
           $('.link5').addClass('show')
 
 })
-$('.shape_6', ).on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link6').addClass('show')
+
+$('.shape_6').on('click', function(){
+
+if($('.link6').is(':visible')){
+  $('.link6').removeClass('show')
+$('.video6').trigger('pause')
+}
+else{
+  $('.link6').addClass('show')
+$('.video6').trigger('play')
+}
 
 })
+
+$('.shape_11').on('click', function(){
+
+if($('.link11').is(':visible')){
+  $('.link11').removeClass('show')
+$('.video11').trigger('pause')
+}
+else{
+  $('.link11').addClass('show')
+$('.video11').trigger('play')
+}
+
+})
+
+
 $('.shape_7').on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link7').addClass('show')
 
 })
-$('.shape_6_2').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link6_2').addClass('show')
 
-})
 $('.shape_9').on('click',function (){
 // $('.link8').css('background-color', 'red')
-          $('.link9').addClass('show')
+          $('.link9').toggleClass('show')
 
 })
 

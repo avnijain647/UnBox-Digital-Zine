@@ -640,9 +640,9 @@ left:90%;
   cursor: pointer;
   position: absolute;
   overflow:hidden;
-  top:30%;
+  top:35%;
 left:15%;
-  width:16%;
+  width:12%;
   /* background-color: red; */
   /* width:2%; */
     /* height:20%; */
@@ -653,13 +653,13 @@ left:15%;
 }
 @keyframes move_x2{
   0%{
-left:15%;
+left:13%;
   }
   50%{
-left:16%;
+left:12%;
   }
   100%{
-    left:15%;
+    left:13%;
   }
 }
 
@@ -869,6 +869,7 @@ position: absolute;
   }
 }
 .link10{
+  display: none;
   z-index:18;
   top:20%;
   left:60%;
@@ -883,12 +884,31 @@ position: absolute;
 .fortune3,
 .fortune4,
 .fortune5{
-  /* transform: rotate(-180deg); */
+  /* position: absolute; */
+  transform: rotate(-180deg);
 }
-.fortune1{
+.link10_1{
+  top:0;
+  left:0;
+  transform: translateY(0);
+  width:100%;
+  height:100%;
+  position: relative;
+  animation: prints 40s linear infinite;
+}
+@keyframes prints{
+  0%{
+transform: translateY(-500%);
+  }
+
+  100%{
+transform: translateY(100%);
+  }
+}
+/* .fortune1{
   transform: translateY(-100%)rotate(-180deg);
   animation: print 6s linear infinite;
-   /* animation-fill-mode: forwards; */
+   animation-fill-mode: forwards;
 }
 .fortune2{
   transform: translateY(-200%)rotate(-180deg);
@@ -925,7 +945,7 @@ transform: translateY(0)rotate(-180deg);
   100%{
 transform: translateY(0)rotate(-180deg);
   }
-}
+} */
 .click4{
   z-index: 12;
 position:absolute;
@@ -1255,7 +1275,7 @@ width:100%;
 height:100%;
 }
 .shape_7{
-  z-index:14;
+  z-index:18;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
@@ -1308,11 +1328,13 @@ transform: scale(1)skewX(10deg)skewY(30deg);
   pointer-events: all;
 cursor:pointer;
 position:absolute;
-top:25%;
-left:25%;
-width:50%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 z-index:14;
 display: none;
+/* background-color: blue; */
 }
 .click8{
   z-index: 12;
@@ -1595,10 +1617,10 @@ height:100%;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
-top:25%;
-right:5%;
-width:60%;
-height:43%;
+top:0;
+right:0;
+width:100%;
+height:100%;
 z-index:14;
 display: none;
 /* background-color: rgb(110,210,150, 0.5); */

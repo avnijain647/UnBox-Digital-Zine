@@ -196,7 +196,7 @@ $('.shape_2_1', ).on('click',function (){
 })
 $('.shapewheel', ).on('click',function (){
 // $('.link8').css('background-color', 'red')
-          $('.link3_1').addClass('show')
+          $('.link10').toggleClass('show')
 
 })
 
@@ -264,8 +264,14 @@ $('.video11').trigger('play')
 
 
 $('.shape_7').on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link7').addClass('show')
+  if($('.link7').is(':visible')){
+    $('.link7').removeClass('show')
+  $('.video7').trigger('pause')
+  }
+  else{
+    $('.link7').addClass('show')
+  $('.video7').trigger('play')
+  }
 
 })
 

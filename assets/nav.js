@@ -181,8 +181,17 @@ $('.shape_2').on('click',function (){
 
 })
 $('.shape_2_1', ).on('click',function (){
-// $('.link8').css('background-color', 'red')
-          $('.link1_1').addClass('show')
+  if($('.link2').is(':visible')){
+    $('.link2').removeClass('show')
+  $('.video2').trigger('pause')
+
+  }
+  else{
+    $('.link2').addClass('show')
+  $('.video2').trigger('play')
+
+
+  }
 
 })
 $('.shapewheel', ).on('click',function (){

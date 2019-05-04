@@ -424,44 +424,60 @@ height:28%;
   pointer-events: all;
 cursor:pointer;
 transform-origin: center;
-
 position:absolute;
-top:24%;
-left:48%;
+top:15%;
+right:15%;
 z-index:100;
-width:12%;
-height:12%;
+/* width:20%; */
+height:30%;
+/* background-color: red; */
+animation: 3s can2 cubic-bezier(.50, .08, 0, .99) infinite;
+}
+@keyframes can2 {
+  0% {
+
+  transform: rotate(0)translateY(0);
+
+  }
+
+  50% {
+transform: rotate(-5deg)translateY(-12%);
+  }
+  100% {
+
+    transform: rotate(0)translateY(0);
+
+  }
 
 }
-
 .shape_2shadow{
   pointer-events: all;
 cursor:pointer;
 /* animation: 6s can linear infinite; */
-animation: 6s can cubic-bezier(.50, .08, 0, .99) infinite;
-transform-origin: bottom right;
+animation: 3s can cubic-bezier(.50, .08, 0, .99) infinite;
+transform-origin: bottom left;
 /* background-color:red; */
 position:absolute;
 z-index:99;
-width:9%;
-height:9%;
-top:27%;
-left:46.5%;
+width:16%;
+height:16%;
+top:25%;
+right:4%;
 
 }
 @keyframes can {
   0% {
 
-  transform: scale(.6)skewX(-10deg);
+  transform: scale(.6)skewX(10deg);
 
   }
 
   50% {
-transform: scale(1) skewX(30deg);
+transform: scale(.9) skewX(-20deg);
   }
   100% {
 
-    transform: scale(.6)skewX(-10deg);
+    transform: scale(.6)skewX(10deg);
 
   }
 
@@ -472,36 +488,47 @@ cursor:pointer;
 transform-origin: center;
 transform: rotate(5deg);
 position:absolute;
-top:48%;
-left:80%;
+top:36%;
+right:10%;
 z-index:10;
-width:6.5%;
-height:6.5%;
-
+width:18%;
+height:18%;
+animation: 3s fan cubic-bezier(.50, .08, 0, .99) infinite;
+}
+@keyframes fan {
+  0% {
+  transform: rotate(0) ;
+  }
+  50% {
+transform: rotate(15deg);
+  }
+  100% {
+  transform: rotate(0);
+  }
 }
 .shape_2_2{
   /* transform: skew(10deg); */
   pointer-events: all;
 cursor:pointer;
 transform-origin: bottom left;
-animation: 6s hit cubic-bezier(.50, .08, 0, .99) infinite;
+animation: 3s hit cubic-bezier(.50, .08, 0, .99) infinite;
 position:absolute;
 /* background-color: red; */
 z-index:10;
-width:5%;
-height:5%;
-top:49%;
-left:81%;
+width:12%;
+height:12%;
+top:44%;
+right:15%;
 }
 @keyframes hit {
   0% {
-  transform: rotate(0) scale(1)skewX(-30deg)skewY(0);
+  transform: rotate(0) scale(1.4)skewX(-30deg)skewY(0);
   }
   50% {
-transform: rotate(0)scale(1.5)skewX(-50deg)skewY(20deg);
+transform: rotate(0)scale(1.6)skewX(-50deg)skewY(10deg);
   }
   100% {
-  transform: rotate(0)scale(1)skewX(-30deg)skewY(0);
+  transform: rotate(0)scale(1.4)skewX(-30deg)skewY(0);
   }
 }
 .link1{
@@ -512,6 +539,17 @@ top:0;
 right:0;
 /* z-index:100; */
 width:101%;
+/* height:90%; */
+display: none;
+}
+.link2{
+  pointer-events: all;
+cursor:pointer;
+position:absolute;
+top:10%;
+left:5%;
+/* z-index:100; */
+width:80%;
 /* height:90%; */
 display: none;
 }
@@ -741,11 +779,21 @@ position: absolute;
   width:12%;
   height:20%;
   overflow: hidden;
-  top:69%;
-  left:14%;
-  /* background-color: blue; */
-
-
+  top:62%;
+  left:5%;
+transform-origin: left;
+animation: 3s speaker cubic-bezier(.50, .08, 0, .99) infinite;
+}
+@keyframes speaker {
+  0% {
+  transform: scale(1.2);
+  }
+  50%{
+transform:  scale(1.8);
+  }
+  100% {
+transform:  scale(1.2);
+  }
 }
 .shape1_2{
   /* perspective: 2000; */
@@ -757,13 +805,13 @@ position: absolute;
 cursor:pointer;
   transform-origin: 0 25;
   /* width:20%; */
-  top:81%;
-  left:16%;
+  top:75%;
+  left:10%;
   overflow: hidden;
   /* background-color: blue; */
   width:11%;
 height:11%;
-    animation: 6s wide cubic-bezier(.50, .08, 0, .99) infinite;
+    animation: 3s wide cubic-bezier(.50, .08, 0, .99) infinite;
 }
 @keyframes wide {
   0% {
@@ -979,15 +1027,15 @@ video{
   position: absolute;
   pointer-events: all;
   z-index:15;
-  top:8%;
-  left:30%;
+  top:7%;
+  left:28%;
   cursor: pointer;
 }
 .ball{
   position: relative;
   z-index:16;
-  width:50%;
-  height:50%;
+  width:70%;
+  height:70%;
 animation: 3s ball cubic-bezier(.50, .08, 0, .99) infinite;
 opacity:1;
 }
@@ -996,7 +1044,7 @@ opacity:1;
   transform: translateY(0);
   }
   50% {
-  transform: translateY(80%);
+  transform: translateY(55%);
   }
 
   100% {
@@ -1006,8 +1054,8 @@ opacity:1;
 .ball_shadow{
   z-index:14;
    /* background: red; */
-  width:50%;
-  height:50%;
+  width:65%;
+  height:65%;
   position: relative;
   /* background-color:red; */
   animation: 3s ballshadow cubic-bezier(.50, .08, 0, .99) infinite;
@@ -1064,9 +1112,9 @@ height:28%;
 cursor:pointer;
 position:absolute;
 top:72%;
-left:85%;
-width:12%;
-height:12%;
+right:35%;
+width:20%;
+height:20%;
 
 }
 .shape_8_1{
@@ -1077,10 +1125,10 @@ cursor:pointer;
 transform-origin: left;
 position:absolute;
 top:78%;
-left:92%;
-width:6%;
-height:6%;
-animation: bottle 6s cubic-bezier(.50, .08, 0, .99) infinite;
+right:32%;
+width:12%;
+height:12%;
+animation: bottle 3s cubic-bezier(.50, .08, 0, .99) infinite;
 
 }
 @keyframes bottle {
@@ -1211,12 +1259,24 @@ height:100%;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
-top:40%;
-left:76%;
+top:30%;
+right:5%;
 transform-origin: center;
 transform:rotate(-45deg);
-width:20%;
-height:20%;
+width:35%;
+height:35%;
+animation: racket1 3s cubic-bezier(.50, .08, 0, .99)infinite;
+}
+@keyframes racket1 {
+  0%{
+transform: rotate(-25deg);
+  }
+  50%{
+transform:  rotate(-45deg);
+  }
+  100%{
+transform: rotate(-25deg);
+  }
 }
 .shape_7_1{
   z-index:14;
@@ -1225,12 +1285,12 @@ cursor:pointer;
 transform-origin: left;
 position:absolute;
 /* background-color: red; */
-top:48%;
-left:78%;
-width:15%;
-height:15%;
+top:42%;
+right:7%;
+width:25%;
+height:25%;
 /* transform: rotate(0)scale(1)skewX(50deg)skewY(20deg); */
-animation: racket 6s cubic-bezier(.50, .08, 0, .99)infinite;
+animation: racket 3s cubic-bezier(.50, .08, 0, .99)infinite;
 }
 @keyframes racket {
   0%{
@@ -1376,10 +1436,10 @@ cursor:pointer;
 position:absolute;
 transform: rotate(-10deg);
 transform-origin: center;
-top:10%;
+top:4%;
 left:66%;
-width:12%;
-height:12%;
+width:25%;
+height:25%;
 }
 .shape_9_1{
   transform: rotate(-24deg);
@@ -1389,11 +1449,11 @@ height:12%;
 cursor:pointer;
 transform-origin: left;
 position:absolute;
-top:12%;
+top:8%;
 left:66.5%;
-width:12%;
-height:12%;
-animation: pin 6s cubic-bezier(.50, .08, 0, .99) infinite;
+width:25%;
+height:25%;
+animation: pin 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 @keyframes pin {
   0%{
@@ -1452,14 +1512,31 @@ height:100%;
 }
 .shape_11{
   /* background-color: red; */
-  z-index:14;
+  z-index:18;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
+transform-origin: bottom;
 top:10%;
-left:13%;
-width:12%;
-height:12%;
+left:11%;
+width:20%;
+height:20%;
+animation: spin2 3s cubic-bezier(.50, .08, 0, .99) infinite;
+}
+@keyframes spin2 {
+  0%{
+
+transform: rotate(-5deg);
+
+  }
+  50%{
+transform:  rotate(5deg);
+  }
+  100%{
+
+transform: rotate(-5deg);
+
+  }
 }
 .shape_11:hover .blue{
   opacity:1;
@@ -1471,12 +1548,12 @@ height:12%;
 cursor:pointer;
 transform-origin: center;
 position:absolute;
-top:19%;
+top:25%;
 left:16%;
-width:6%;
-height:6%;
+width:10%;
+height:10%;
 /* transform: scale(1) rotate(0deg)skewY(0deg) skewX(60deg); */
-animation: spin 6s cubic-bezier(.50, .08, 0, .99) infinite;
+animation: spin 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 @keyframes spin {
   0%{

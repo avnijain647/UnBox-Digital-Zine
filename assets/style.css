@@ -169,23 +169,37 @@ height:100%;
   right:0;
 }
 #threed{
+  /* background-color: blue; */
   overflow: visible;
   transform-style: preserve-3d;
-  top:80%;
-left:80%;
+  perspective: 5000;
+  top:50%;
+  transform-origin: center;
+left:55%;
   position: absolute;
-  width:20%;
-  height: 20%;
+  width:16%;
+  height: 16%;
 animation: xd 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 
 
 @keyframes xd {
   0% {
+    width:16%;
+    height: 16%;
+      /* transform: translateZ(0); */
     transform: rotateX(-90Deg);
     transform: rotateY(0Deg);
   }
+  50% {
+    width:30%;
+    height: 30%;
+
+  }
   100% {
+    width:16%;
+    height: 16%;
+      /* transform: translateZ(-100%); */
     transform: rotateX(-90Deg);
     transform: rotateY(360Deg);
   }
@@ -532,13 +546,11 @@ transform: rotate(0)scale(1.6)skewX(-50deg)skewY(10deg);
   }
 }
 .link1{
-  pointer-events: all;
-cursor:pointer;
 position:absolute;
 top:0;
 right:0;
 /* z-index:100; */
-width:101%;
+width:100%;
 /* height:90%; */
 display: none;
 }
@@ -640,10 +652,10 @@ left:90%;
   cursor: pointer;
   position: absolute;
   overflow:hidden;
-  top:35%;
-left:15%;
-  width:12%;
-  /* background-color: red; */
+  top:29%;
+left:12%;
+  width:18%;
+  /* background-color: blue; */
   /* width:2%; */
     /* height:20%; */
     /* transform-origin: center; */
@@ -832,15 +844,7 @@ transform:  scale(1.2) skewX(60deg);
   width:100%;
   height:100%;
 }
-.shape_10{
-  top:30%;
-  left:40%;
-  pointer-events:all;
-  cursor: pointer;
-position: absolute;
-  width:7.5%;
-  height:9%;
-}
+
 .shapewheel{
   z-index:16;
   width:100%;
@@ -866,6 +870,30 @@ position: absolute;
   100% {
     transform: rotate(360deg);
 
+  }
+}
+.shape_10{
+  pointer-events: all;
+  cursor: pointer;
+  /* background-repeat: no-repeat; */
+  background-image: url(slinky2.png);
+  background-position: 0 0;
+  background-size: auto 100%;
+  /* background-color: red; */
+  top:35%;
+  left:45%;
+  width:100px;
+  height:120px;
+  position:absolute;
+  animation:  slinky 2s steps(19) infinite;
+}
+
+@keyframes slinky{
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 2060px 0;
   }
 }
 .link10{
@@ -894,7 +922,16 @@ position: absolute;
   width:100%;
   height:100%;
   position: relative;
-  animation: prints 40s linear infinite;
+  animation: prints 40s steps(240) infinite;
+}
+.link10_2{
+  top:0;
+  left:0;
+  /* transform: translateY(0); */
+  width:20%;
+  height:2%;
+  position: relative;
+  /* animation: prints 6s linear infinite; */
 }
 @keyframes prints{
   0%{
@@ -1452,7 +1489,7 @@ height:100%;
 }
 .shape_9{
   /* background-color: red; */
-  z-index:14;
+  z-index:30;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
@@ -1498,8 +1535,42 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:14;
+/* z-index:14; */
+position: absolute;
 display: none;
+/* background-color: rgb(110,210,150, 0.5); */
+}
+.video9_1{
+  z-index:19;
+position: absolute;
+top:50%;
+left:15%;
+/* width:20%; */
+height:25%;
+}
+.video9_2{
+  z-index:19;
+position: absolute;
+top:50%;
+left:-35%;
+/* width:20%; */
+height:30%;
+}
+.video9_3{
+  z-index:19;
+position: absolute;
+top:20%;
+left:5%;
+/* width:20%; */
+height:20%;
+}
+.img9_4{
+  z-index:20;
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:100%;
 /* background-color: rgb(110,210,150, 0.5); */
 }
 .click10{
@@ -1539,8 +1610,8 @@ height:100%;
 cursor:pointer;
 position:absolute;
 transform-origin: bottom;
-top:10%;
-left:11%;
+top:5%;
+left:5%;
 width:20%;
 height:20%;
 animation: spin2 3s cubic-bezier(.50, .08, 0, .99) infinite;
@@ -1570,8 +1641,8 @@ transform: rotate(-5deg);
 cursor:pointer;
 transform-origin: center;
 position:absolute;
-top:25%;
-left:16%;
+top:20%;
+left:10%;
 width:10%;
 height:10%;
 /* transform: scale(1) rotate(0deg)skewY(0deg) skewX(60deg); */
@@ -1594,12 +1665,12 @@ transform: scale(.4)  skewX(40deg);
 }
 
 .link11{
-  pointer-events: all;
-cursor:pointer;
+pointer-events: all;
+cursor:auto;
 position:absolute;
-bottom:5%;
-left:5%;
-width:90%;
+top:10%;
+left:10%;
+width:80%;
 /* height:50%; */
 z-index:14;
 display: none;
@@ -1651,6 +1722,7 @@ height:28%;
   top:0;
   left: 0;
  width:2860vw;
+ pointer-events: none;
  /* height:100vh; */
  /* background-color: red; */
  overflow: hidden;

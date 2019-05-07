@@ -7,13 +7,12 @@
 var windowWidth = $(window).width()
       if(windowWidth>600){
         $("#overview").addClass("zoom-out")
-
-      $('html,body').animate({
-     scrollTop: init_top,
+  $("#overview").css({"height":2200, "width":2600})
+      $('html,body').animate({scrollTop: init_top,
       scrollLeft:init_left}, 300), true}
 
     })
-
+    //
     $(document).ready(function() {
 
     var windowWidth = $(window).width()
@@ -22,7 +21,7 @@ var windowWidth = $(window).width()
       $(document).hide('.zoom-in')
       	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
       $(document).hide('.zoom-in')
-      	// $("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
+      	$("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
         $(document).hide('.zoom-out')
         $(document).hide('.zoom-in')
         $('.scroll_all').animate({
@@ -49,29 +48,20 @@ $('#overview').on('click', function(e){
   var overview_image_width = $("#overview").width()
   var overview_image_height = $("#overview").height()
 
-   var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
-  var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
-
 
             if($('.zoom-out').is(':visible') && windowWidth>600){
-
-
-
 
             $("#overview").removeClass("zoom-out").addClass("zoom-in")
             $("#overview").css({"height":84 + 'vw', "width":window_width})
               $(".click_layer").css({"height":84 + 'vw', "width":window_width})
 
 
-          $('html, body').animate({scrollTop:top - offset_top, scrollLeft:0},500);
-    console.log(top)
-
 }else if (windowWidth>600){
 
 
-
-       var offset_top = event.pageY;
-       var offset_left = event.pageX;
+       //
+       // var offset_top = event.pageY;
+       // var offset_left = event.pageX;
 
        var overview_image_width = $("#overview").width()
        var overview_image_height = $("#overview").height()
@@ -82,14 +72,18 @@ $('#overview').on('click', function(e){
       //  var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
  			// var left = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
 
-$('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left}, 300);
+// $('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left}, 300);
 $("#overview").removeClass("zoom-in").addClass("zoom-out")
 $("#overview").css({"height":2200, "width":2600})
-  // $(".click_layer").css('opacity',0)
+
 
 $(".click_layer").css({"height":2200 , "width":2600})
+var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
+ var top = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
 
+$('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left},500);
 
+  // $(".click_layer").css('opacity',0)
 
 }
 
@@ -170,11 +164,13 @@ $('.shape_2').on('click',function (){
   if($('.link1').is(':visible')){
     $('.link1').removeClass('show')
   $('.video1').trigger('pause')
+  // $(".video1").prop("volume", 0.5);
 
   }
   else{
     $('.link1').addClass('show')
   $('.video1').trigger('play')
+  $(".video1").prop("volume", 0);
 
 
   }
@@ -194,9 +190,20 @@ $('.shape_2_1', ).on('click',function (){
   }
 
 })
-$('.shapewheel', ).on('click',function (){
-// $('.link8').css('background-color', 'red')
+$('.shape_10', ).on('click',function (){
+// $('.link8').css('bac kground-color', 'red')
           $('.link10').toggleClass('show')
+          if($('.link10').is(':visible')){
+            // $('.link10').removeClass('show')
+          $('.video10').trigger('play')
+
+          }
+          else{
+            // $('.link10').addClass('show')
+          $('.video10').trigger('pause')
+
+
+          }
 
 })
 
@@ -266,9 +273,11 @@ $('.video11').trigger('play')
 $('.shape_7').on('click',function (){
   if($('.link7').is(':visible')){
     $('.link7').removeClass('show')
+    $('.audio7').trigger('pause')
   $('.video7').trigger('pause')
   }
   else{
+      $('.audio7').trigger('play')
     $('.link7').addClass('show')
   $('.video7').trigger('play')
   }
@@ -278,6 +287,16 @@ $('.shape_7').on('click',function (){
 $('.shape_9').on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link9').toggleClass('show')
+          if($('.link9').is(':visible')){
+          $('.video9_1').trigger('play')
+            $('.video9_2').trigger('play')
+              $('.video9_3').trigger('play')
+          }
+          else{
+          $('.video9_1').trigger('pause')
+            $('.video9_2').trigger('play')
+              $('.video9_3').trigger('play')
+          }
 
 })
 

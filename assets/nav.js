@@ -13,26 +13,26 @@ var windowWidth = $(window).width()
 
     })
     //
-    $(document).ready(function() {
-
-    var windowWidth = $(window).width()
-    if(windowWidth<600){
-
-      $(document).hide('.zoom-in')
-      	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
-      $(document).hide('.zoom-in')
-      	$("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
-        $(document).hide('.zoom-out')
-        $(document).hide('.zoom-in')
-        $('.scroll_all').animate({
-       scrollTop: 0,
-        scrollLeft:0}, 100), true}
-
-
-
-
-
-    })
+    // $(document).ready(function() {
+    //
+    // var windowWidth = $(window).width()
+    // if(windowWidth<600){
+    //
+    //   $(document).hide('.zoom-in')
+    //   	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
+    //   $(document).hide('.zoom-in')
+    //   	$("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
+    //     $(document).hide('.zoom-out')
+    //     $(document).hide('.zoom-in')
+    //     $('.scroll_all').animate({
+    //    scrollTop: 0,
+    //     scrollLeft:0}, 100), true}
+    //
+    //
+    //
+    //
+    //
+    // })
 
       var window_height = $(window).height();
       var window_width= $(window).width();

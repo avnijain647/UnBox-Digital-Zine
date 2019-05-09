@@ -90,19 +90,7 @@ $('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left},500);
 
 
 })
-$('.hand2').on('click',function (){
 
-          $(".yellow2").toggleClass('slide')
-
-})
-$('.hand3').on('click',function (){
-  $(".ball").toggleClass('ball_hide')
-    $(".ball_shadow").toggleClass('ball_hide')
-          $(".red2").toggleClass('slideup')
-          $(".shape5_2").toggleClass('coffee')
-            $(".shape5_3").toggleClass('coffee')
-
-})
 $('.hand4').on('click',function (){
 
   if($('.link12').is(':visible')){
@@ -127,13 +115,29 @@ $('.video12').trigger('play')
 //
 // })
 $('.shape1_1').on('click',function (){
-
-          $(".link3").toggleClass('show')
-            $(".link3_1").toggleClass('show')
+$('.link3_1').toggleClass('show')
+    if($('.link3').is(':visible')){
+      $('.link3').removeClass('show')
+    $('.audio1').trigger('pause')
+    $('.audio2').trigger('pause')
+    $('.audio3').trigger('pause')
+    $('.audio4').trigger('pause')
+    $('.audio5').trigger('pause')
+    $('.audio6').trigger('pause')
+  $('.audio7').trigger('pause')
+    }
+    else{
+      $('.link3').addClass('show')
+    }
+})
+$('.audio1').on('click', function playAudio(){
+  $('.audio1_header').toggleClass('reveal')
+  // $('.audio1').css('background-color', 'red')
 
 })
 
-$('.shape8').on('click',function (){
+$('.coffee').on('click', function (){
+
   if($('.link8').is(':visible')){
     $('.link8').removeClass('show')
   $('.video8_1').trigger('pause')
@@ -288,14 +292,18 @@ $('.shape_9').on('click',function (){
 // $('.link8').css('background-color', 'red')
           $('.link9').toggleClass('show')
           if($('.link9').is(':visible')){
+            $('.audio9').trigger('play')
           $('.video9_1').trigger('play')
             $('.video9_2').trigger('play')
               $('.video9_3').trigger('play')
+              $('.video9_4').trigger('play')
           }
           else{
+              $('.audio9').trigger('pause')
           $('.video9_1').trigger('pause')
-            $('.video9_2').trigger('play')
-              $('.video9_3').trigger('play')
+            $('.video9_2').trigger('pause')
+              $('.video9_3').trigger('pause')
+              $('.video9_4').trigger('pause')
           }
 
 })

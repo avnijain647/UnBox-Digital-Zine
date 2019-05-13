@@ -125,13 +125,14 @@ $('.link3_1').toggleClass('show')
     }
 })
 $('.audio1_1').on('click', function (){
-  if ($('.audio1_1').trigger('play')) {
+  if ($('.audio1_1').trigger('pause')) {
         $('.audio1_header').addClass('reveal')
 
     } else {
         $('.audio1_header').removeClass('reveal')
     }
 })
+
 
 $('.coffee').on('click', function (){
 

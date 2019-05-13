@@ -191,9 +191,9 @@ height:100%;
   transform-style: preserve-3d;
   perspective: 2000px;
 z-index:1;
-  top:30%;
+  top:40%;
   transform-origin: center;
-right:5%;
+right:3%;
   position: absolute;
   width:16%;
   height: 16%;
@@ -201,11 +201,12 @@ animation: xd 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 
 #threed2{
+  z-index:1;
   /* background-color: blue; */
   overflow: visible;
   transform-style: preserve-3d;
-  perspective: 2000px;
-  top:40%;
+  perspective: 1985px;
+  top:64%;
   transform-origin: center;
 left:55%;
   position: absolute;
@@ -213,22 +214,25 @@ animation: xd2 3s cubic-bezier(.50, .08, 0, .99) infinite;
 }
 @keyframes xd2 {
   0% {
-    width:30%;
-    height: 30%;
-      transform: translateY(0);
+    width:18%;
+    height: 18%;
+      transform: translateY(50%);
     transform: rotateX(-90Deg);
     transform: rotateY(0Deg);
+      /* transform: rotateZ(0Deg); */
     /* transform: rotateZ(0); */
   }
+
   50% {
-    width:45%;
-    height: 45%;
-/* transform: rotateZ(20deg); */
+
+    width:20%;
+    height: 20%;
+
   }
   100% {
-    width:30%;
-    height: 30%;
-      transform: translateY(-100%);
+    width:18%;
+    height: 18%;
+      transform: translateY(200%);
     transform: rotateX(-90Deg);
     transform: rotateY(360Deg);
     /* transform: rotateZ(0); */
@@ -243,8 +247,8 @@ animation: xd2 3s cubic-bezier(.50, .08, 0, .99) infinite;
     transform: rotateY(0Deg);
   }
   50% {
-    width:24%;
-    height: 24%;
+    width:18%;
+    height: 18%;
 
   }
   100% {
@@ -477,6 +481,7 @@ position: relative;
 }
 .click1{
 /* background-color: red; */
+overflow:hidden;
   z-index: 12;
 position:absolute;
 top:0;
@@ -1822,9 +1827,11 @@ width:100%;
 height:100%;
 z-index:14;
 display: none;
+
 /* background-color: rgb(110,210,150, 0.5); */
 }
 .click12{
+  overflow: hidden;
   z-index: 12;
 position:absolute;
 top:84%;

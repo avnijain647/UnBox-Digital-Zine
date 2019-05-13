@@ -1394,7 +1394,7 @@ animation: turnflag 1.5s linear infinite;
   pointer-events: all;
 cursor:pointer;
 position:absolute;
-background-color: blue;
+/* background-color: blue; */
 top:2%;
 left:2%;
 width:70%;

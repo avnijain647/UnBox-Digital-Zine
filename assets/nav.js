@@ -7,17 +7,15 @@
 var windowWidth = $(window).width()
       if(windowWidth>600){
         $("#overview").addClass("zoom-out")
-  $("#overview").css({"height":2200, "width":2600})
+  // $("#overview").css({"height":168 + 'vw', "width":200 + 'vw'})
       $('html,body').animate({scrollTop: init_top,
       scrollLeft:init_left}, 300), true}
 
     })
 
     $(document).ready(function() {
-
     var windowWidth = $(window).width()
     if(windowWidth<600){
-
       // $(document).hide('.zoom-in')
       	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
       // $(document).hide('.zoom-in')
@@ -27,10 +25,6 @@ var windowWidth = $(window).width()
         $('.scroll_all').animate({
        scrollTop: 0,
         scrollLeft:0}, 100), true}
-
-
-
-
 
     })
 
@@ -74,10 +68,10 @@ $('#overview').on('click', function(e){
 
 // $('html, body').animate({scrollTop:offset_top, scrollLeft:offset_left}, 300);
 $("#overview").removeClass("zoom-in").addClass("zoom-out")
-$("#overview").css({"height":2200, "width":2600})
+$("#overview").css({"height":168 +'vw', "width":200 +'vw'})
 
 
-$(".click_layer").css({"height":2200 , "width":2600})
+$(".click_layer").css({"height":168 +'vw' , "width":200 +'vw'})
 var top = Math.round(((offset_top*image_height)/overview_image_height)-(window_height/2));
  var top = Math.round(((offset_left*image_width)/overview_image_width)-(window_width/2));
 
@@ -130,10 +124,13 @@ $('.link3_1').toggleClass('show')
       $('.link3').addClass('show')
     }
 })
-$('.audio1').on('click', function playAudio(){
-  $('.audio1_header').toggleClass('reveal')
-  // $('.audio1').css('background-color', 'red')
+$('.audio1_1').on('click', function (){
+  if ($('.audio1_1').trigger('play')) {
+        $('.audio1_header').addClass('reveal')
 
+    } else {
+        $('.audio1_header').removeClass('reveal')
+    }
 })
 
 $('.coffee').on('click', function (){

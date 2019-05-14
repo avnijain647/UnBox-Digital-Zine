@@ -104,15 +104,7 @@ overflow: scroll;
   height:0;
 
 }
-.slide10_1{
-    z-index: 1;
-  position:absolute;
-  top:0;
-  left:33.3%;
-  width:0;
-  height:0;
 
-}
 .slide9_1{
   z-index: 1;
 position:absolute;
@@ -498,7 +490,7 @@ position:absolute;
 top:15%;
 right:15%;
 z-index:100;
-/* width:20%; */
+width:20%;
 height:30%;
 /* background-color: red; */
 animation: 3s can2 cubic-bezier(.50, .08, 0, .99) infinite;
@@ -708,12 +700,12 @@ left:90%;
   cursor: pointer;
   position: absolute;
   overflow:hidden;
-  top:28.5%;
+  top:32%;
 left:12%;
   width:15%;
   /* background-color: blue; */
-  /* width:2%; */
-    /* height:20%; */
+
+    height:35%;
     /* transform-origin: center; */
     transform: rotate(-90deg);
   animation: 1.4s move_x2 linear infinite;
@@ -1122,7 +1114,7 @@ height:28%;
   top:62%;
   left:66%;
   width:8%;
-  /* height:15%; */
+  height:16%;
   z-index:18;
   transform-origin: right bottom;
     /* background-color: rgb(110,210,150, 0.5); */
@@ -1956,13 +1948,8 @@ left:0;
 width:180vw;
 height:125vw;
 }
-.hand2{
-  /* display:none; */
-}
-.hand3,
-.hand4{
-  display: none;
-}
+
+
 
 .shape5_2,
 .shape5_3{

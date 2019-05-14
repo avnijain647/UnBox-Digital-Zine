@@ -17,9 +17,9 @@ var windowWidth = $(window).width()
     var windowWidth = $(window).width()
     if(windowWidth<600){
       // $(document).hide('.zoom-in')
-      	$(".scroll_all").css({"height":100 + 'vh', "width":2700 + "vw"})
+      	$(".scroll_all").css({"height":100 + 'vh', "width":2425 + "vw"})
       // $(document).hide('.zoom-in')
-      	$("#overview").css({"height":100 + 'vh', "width":2900 + "vw"})
+      	$("#overview").css({"height":100 + 'vh', "width":2750 + "vw"})
         $(document).hide('.zoom-out')
         $(document).hide('.zoom-in')
         $('.scroll_all').animate({
